@@ -17,3 +17,8 @@ while numero1 >= numero2:
     
 
 print(f" {tmp}/{numero2}={division} con resto {numero1}")
+
+
+
+
+input ("\n Pulsa para salir")

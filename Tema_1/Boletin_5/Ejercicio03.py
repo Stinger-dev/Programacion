@@ -43,3 +43,8 @@ if (1 <= dia <= mesesValidos[mes-1][1]) and (1<=mes<=12):
     
 else:
     print(" Mes o dia no validos")
+    
+    
+    
+    
+input ("\n Pulsa para salir")

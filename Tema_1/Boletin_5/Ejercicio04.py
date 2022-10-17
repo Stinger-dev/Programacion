@@ -134,4 +134,4 @@ if not (donaTipo):
     print("No son compatibles")
     
     
-                
+input ("\n Pulsa para salir")

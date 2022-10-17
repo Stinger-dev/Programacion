@@ -8,4 +8,7 @@ while numero != 1:
     else:
         numero = numero*3+1
     historial.append(numero)
-print(historial)    
+print(historial)  
+
+
+input ("\n Pulsa para salir")  

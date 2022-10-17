@@ -17,3 +17,5 @@ for n in range(cantidad):
      
 print("",numeros)
     
+    
+input ("\n Pulsa para salir")

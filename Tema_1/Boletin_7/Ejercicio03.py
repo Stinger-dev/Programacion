@@ -11,3 +11,6 @@ while numero !=0:
     print(f" {numero} => es {tipo}, {signo} y su cuadrado es {cuadrado}")
     numero = int(input(" Numero: "))    
 
+
+
+input ("\n Pulsa para salir")
