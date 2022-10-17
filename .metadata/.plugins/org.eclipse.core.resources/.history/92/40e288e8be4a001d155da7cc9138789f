@@ -1,8 +1,0 @@
-tipo = input("Sangre")
-palabra = [] 
-
-for n in range (len(tipo)):
-    palabra.append(tipo[n])
-
-
-print(palabra[:])   

@@ -1,9 +1,0 @@
-tipo = input("Sangre").strip()
-palabra = [] 
-
-palabra.append(tipo[-1])
-
-
-print(palabra[:])  
-
-   

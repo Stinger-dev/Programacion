@@ -1,5 +1,0 @@
-tipo = input("Sangre:")
-
-
-if "-" in tipo:
-    print("funciona")
