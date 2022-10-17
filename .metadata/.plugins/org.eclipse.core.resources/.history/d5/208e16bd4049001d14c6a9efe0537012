@@ -1,0 +1,16 @@
+
+agno = 2020
+mes = 10
+diasTotal = 0
+
+mesesValidos = ["ENERO","FEBRERO", "MARZO","ABRIL","MAYO","JUNIO","JULIO","AGOSTO","SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"]
+meses31 = ["ENERO", "MARZO","MAYO", "JULIO","AGOSTO", "OCTUBRE", "DICIEMBRE"]
+mes28 = ["FEBRERO"]
+meses30 = ["ABRIL","JUNIO","SEPTIEMBRE", "NOVIEMBRE"]
+
+if (agno % 4 == 0 and agno % 100 != 0) or (agno % 400 == 0):
+    diasTotal = 1
+print(mes)
+mes = mesesValidos[mes]
+    
+print(mes)

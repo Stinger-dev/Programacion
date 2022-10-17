@@ -1,0 +1,5 @@
+tipo = input("Sangre:")
+
+
+if "a b c - + " in tipo:
+    print("funciona")

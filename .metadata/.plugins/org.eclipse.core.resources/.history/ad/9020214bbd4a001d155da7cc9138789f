@@ -1,0 +1,8 @@
+tipo = input("Sangre:")
+
+palabra = [] 
+    
+for n in range (len(tipo)):
+    palabra.append(n)
+    print(palabra)
+    

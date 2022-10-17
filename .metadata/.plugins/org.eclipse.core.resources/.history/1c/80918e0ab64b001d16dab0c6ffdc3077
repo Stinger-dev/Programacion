@@ -1,0 +1,8 @@
+mes = int(input(" Meses en los que lo ha dividido: "))
+precio = float(input(" Precio del primer mes: "))
+
+for n in range(mes):
+    precio = precio +  precio*2
+    
+    
+print(" El precio final es de %s euros" %(precio))

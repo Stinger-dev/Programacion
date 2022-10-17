@@ -1,0 +1,15 @@
+numero1 = 2 
+numero2 = 20
+
+
+if numero2 > numero1:  #numero 1 sera el mas grande
+    numero1 = numero2*numero1
+    numero2 = numero1/numero2
+    numero1=  numero1/numero2
+
+division=0
+
+while numero1 > numero2:
+    numero1=numero1-numero2
+    division+=1
+print(division)

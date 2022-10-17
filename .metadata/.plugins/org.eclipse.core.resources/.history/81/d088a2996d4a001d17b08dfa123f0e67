@@ -1,0 +1,10 @@
+tipo = input("Sangre:")
+
+
+if "-" in tipo:
+    print("funciona")
+    
+    
+    
+for n in range (tipo):
+    print("hola")

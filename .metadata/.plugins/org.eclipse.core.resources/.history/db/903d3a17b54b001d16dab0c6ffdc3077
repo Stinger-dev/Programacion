@@ -1,0 +1,10 @@
+numero1 = 2
+numero2 = 4
+
+
+if numero2 > numero1:
+    numero1 = numero2*numero1
+    numero2 = numero1/numero2
+    numero1=  numero1/numero2
+print(numero1)
+print(numero2)

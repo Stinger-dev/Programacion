@@ -1,0 +1,19 @@
+
+agno = 2020
+mes = 10
+diasTotal = 0
+dia = 10
+
+dias__hasta_el_mes = [0,31,59, 90,120,151,181,212,243,273.304,334]
+meses31 = [1,3,5, 7,8,10,12]
+mes28 = [2]
+meses30 = [4,6,9,11]
+
+if ((agno % 4 == 0 and agno % 100 != 0) or (agno % 400 == 0)and mes > 2):
+    diasTotal = 1
+    
+    
+diasTotal = dia + dias__hasta_el_mes[mes-1]+diasTotal
+
+print(diasTotal)
+

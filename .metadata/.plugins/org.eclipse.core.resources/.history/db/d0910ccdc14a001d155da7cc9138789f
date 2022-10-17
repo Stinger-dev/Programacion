@@ -1,0 +1,19 @@
+tipo1 = input("Primer tipo: ").strip()
+signo1 = tipo1[-1]
+tipo1 = tipo1[:-1]
+tipo2 = input("Segundo tipo: ").strip()
+
+A = [["A", "AB"],["A", "0"]]
+B = [["B, AB"],["B", "0"]] 
+AB = [["AB"],["A", "B","AB", "0"]]
+O = [["A", "B", "AB", "0"],["0"]]
+
+match tipo1:
+    case 
+
+
+
+
+
+
+

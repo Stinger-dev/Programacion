@@ -1,0 +1,15 @@
+tipo = input("Sangre").strip()
+palabra = [] 
+validos = ["a", "b", "ab", "+", "-"]
+
+for n in range (len(tipo)):
+    palabra.append(tipo[n])
+
+
+print(palabra[:])  
+
+
+if palabra in validos:
+    print("funciona")
+else:
+    print("se veia venir")    
