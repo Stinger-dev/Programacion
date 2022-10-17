@@ -5,7 +5,8 @@ numero2 = float (input(" Numero 2:"))
 if numero2 > numero1:  #numero 1 sera el mas grande
     numero1 = numero2*numero1
     numero2 = numero1/numero2
-    numero1=  numero1/numero2
+    numero1 =  numero1/numero2
+    
 tmp=numero1
 division=0
 
