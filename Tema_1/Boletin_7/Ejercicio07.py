@@ -1,4 +1,3 @@
-
 numero = int(input(" Numero: "))
 tmp = []
 for i in range (numero):

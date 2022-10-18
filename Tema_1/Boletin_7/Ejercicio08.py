@@ -1,4 +1,4 @@
-numero = 9
+numero = int(input(" Tamaño: "))
 tipo = input(" Que figura quires? (Cuadrado, triangulo, rombo): ").upper()
 
 match tipo:

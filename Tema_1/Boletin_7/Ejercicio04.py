@@ -1,4 +1,4 @@
-numero = 6
+numero = int(input(" Indique el tamaño: "))
 
 
 tmp = 1
@@ -7,7 +7,7 @@ for i in range(numero):
     
     print((5**i)*tmp, end = ",")
     tmp*=-1
-print(" ")
+print("")
 
 
 tmp = 1
@@ -20,9 +20,9 @@ for i in range(numero):
             tmp = -1
         case -1:
             tmp = 0
-        case 0:
+        case _:
             tmp = 1 
-print(" ")
+print("")
 
 
 
