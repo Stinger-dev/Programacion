@@ -15,6 +15,6 @@ for n in range(cantidad):
             encontrado = True
         k += 1
      
-print("", numeros)
+print("", *numeros)
     
 input ("\n Pulsa para salir") 
