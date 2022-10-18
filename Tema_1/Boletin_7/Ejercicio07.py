@@ -4,11 +4,8 @@ tmp = []
 for i in range (numero):
     tmp.append(numero)
     print(*tmp)     
-
-
     
 input ("\n Pulsa para salir")    
-    
 
 '''
 

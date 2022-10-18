@@ -1,8 +1,8 @@
 tipo = input(" Indique el tipo del producto: ").upper()
-precio= float(input(" Indique el precio del producto: "))
+precio = float(input(" Indique el precio del producto: "))
 descuento = 0
 
-if (precio > 0 and (tipo == "A" or tipo == "B" or tipo =="C")):
+if (precio > 0 and (tipo == "A" or tipo == "B" or tipo == "C")):
     if tipo == "A":
         descuento = 7
     elif tipo == "C" or precio < 500:
@@ -10,8 +10,6 @@ if (precio > 0 and (tipo == "A" or tipo == "B" or tipo =="C")):
     else:
         descuento = 9
         
-        
-print(" El precio tras la renaja es", precio*(1-(descuento/100)))        
-
+print(" El precio tras la renaja es", precio * (1 - (descuento / 100)))        
 
 input("\n Pulse enter para salir")

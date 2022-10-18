@@ -22,29 +22,23 @@ aunque casi que me era mas facil calcularlos a mano que programar esto y asegura
 
 '''
 
-
 agno = int(input(" Año: "))
 mes = int(input(" Mes: "))
 dia = int(input(" Dia: "))
 diasTotal = 0
-mesesValidos = [[1,31],[2,28],[3,31],[4,30],[5,31],[6,30],[7,31],[8,31],[9,30],[10,31],[11,30],[12,31]]
+mesesValidos = [[1, 31], [2, 28], [3, 31], [4, 30], [5, 31], [6, 30], [7, 31], [8, 31], [9, 30], [10, 31], [11, 30], [12, 31]]
 
-
-if (((agno % 4 == 0 and agno % 100 != 0) or (agno % 400 == 0))and mes >= 2): #Con esto calculo si le cambio el numero maximo de dias a febrerp
+if (((agno % 4 == 0 and agno % 100 != 0) or (agno % 400 == 0))and mes >= 2):  # Con esto calculo si le cambio el numero maximo de dias a febrerp
         diasTotal = 1
         mesesValidos[1][1] = 29
-        
 
-if (1 <= dia <= mesesValidos[mes-1][1]) and (1<=mes<=12):    
-    dias_hasta_el_mes = [0,31,59, 90,120,151,181,212,243,273,304,334] 
-    diasTotal = (dia-1) + dias_hasta_el_mes[mes-1]+diasTotal
+if (1 <= dia <= mesesValidos[mes - 1][1]) and (1 <= mes <= 12): 
+    dias_hasta_el_mes = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334] 
+    diasTotal = (dia - 1) + dias_hasta_el_mes[mes - 1] + diasTotal
     
     print(f" Han pasado {diasTotal} dias, desde el uno de enero de ese mismo año")
     
 else:
     print(" Mes o dia no validos")
-    
-    
-    
     
 input ("\n Pulsa para salir")

@@ -27,7 +27,6 @@ input("\n Pulse enter para salir")
 
 letra = input(" Indique la letra: ").upper()
 
-
 letra = input(" Indique la letra: ").upper()
 
 if letra == "A":
@@ -38,11 +37,9 @@ elif letra == "I":
     print(" Es la tercera vocal")
 elif letra == "0":
     print(" Es la cuarta vocal ")
-elif letra == "U":                  #Este es el cambio que me comento en la coreccion     
+elif letra == "U":  # Este es el cambio que me comento en la coreccion     
     print(" Es la quinta vocal")         
 else:
-    print(" %s no es una vocal" %(letra))
-    
-    
+    print(" %s no es una vocal" % (letra))
     
 input("\n Pulse enter para salir")

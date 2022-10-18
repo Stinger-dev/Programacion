@@ -8,10 +8,9 @@ if 1 <= mes <= 12:
     else:
         dia = 31
 
-if dia > 0 :
-    print( " El mes %s tiene %s dias" %(mes, dia))
-else :
+if dia > 0:
+    print(" El mes %s tiene %s dias" % (mes, dia))
+else:
     print(" El mes no existe")
-    
 
 input("\n Presiona enter para salir")

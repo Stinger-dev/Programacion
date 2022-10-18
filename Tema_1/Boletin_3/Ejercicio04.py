@@ -1,6 +1,6 @@
 edad = int(input(" Indique la edad: "))
 
-if 30<= edad <= 100:
+if 30 <= edad <= 100:
     print(" La persona es adulta")
 elif 18 <= edad <= 29:
     print(" La persona es joven")

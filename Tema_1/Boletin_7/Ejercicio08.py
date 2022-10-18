@@ -44,7 +44,6 @@ match tipo:
             for j in range(i+2):
                 print(" ", end = "")
             print(" ")
-            
-
     
+     
 input ("\n Pulsa para salir")   

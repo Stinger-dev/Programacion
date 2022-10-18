@@ -38,5 +38,4 @@ elif dia == 7:
 else:
     print(" Dia no valido")
     
-    
 input("\n Pulse para salir")

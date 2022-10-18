@@ -14,7 +14,6 @@ while flag != "N" and flag == "Y":
     
     flag = input(" Do you want to  enter more number (Y/N): ").upper()
 
-
 print(f" The smallest number is {minimo}")
 
 input("\n Push enter to exit")

@@ -8,5 +8,4 @@ elif numero1 > numero2:
 else:
     print(" El numero 2 es mayor que el numero 1")
 
-
 input("\n Pulse enter para salir")

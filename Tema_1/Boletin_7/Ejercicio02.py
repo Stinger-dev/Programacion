@@ -10,12 +10,11 @@ k = numero1
 for n in range(cantidad):
     encontrado = False
     while not encontrado:
-        if k%numero2 == 0:
+        if k % numero2 == 0:
             numeros.append(k)
             encontrado = True
-        k+=1
+        k += 1
      
-print("",numeros)
-    
+print("", numeros)
     
 input ("\n Pulsa para salir") 

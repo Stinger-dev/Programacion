@@ -4,6 +4,6 @@ resultado = 0
 for n in range(numA):
     resultado = resultado + numB
     
-print(" The product is %s"  %(resultado))
+print(" The product is %s" % (resultado))
 
 input("\n Push enter to exit")

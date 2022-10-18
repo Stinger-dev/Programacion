@@ -7,13 +7,13 @@ y al igual con los 50 años
 
 '''
 
-if (estadoCivil == "S" or estadoCivil == "D") and edad<35:
+if (estadoCivil == "S" or estadoCivil == "D") and edad < 35:
     retencion = 12
-elif (edad>50):
+elif (edad > 50):
     retencion = 8.5 
 elif (estadoCivil == "C" or estadoCivil == "V") and edad < 35:
     retencion = 11.3
 else:
     retencion = 10.5
     
-print(" la retencion es de un",retencion,"%")
+print(" la retencion es de un", retencion, "%")

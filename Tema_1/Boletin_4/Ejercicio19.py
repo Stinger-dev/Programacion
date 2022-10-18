@@ -10,9 +10,9 @@ while exponente < 0:
 if exponente == 0:
     resultado = 1
 else:
-    for n in range(exponente):  
+    for n in range(exponente): 
         resultado = resultado * base
         
-print(" %s ^ %s = %s" %(base, exponente, resultado))
+print(" %s ^ %s = %s" % (base, exponente, resultado))
 
 input("\n Pulse enter para salir")
