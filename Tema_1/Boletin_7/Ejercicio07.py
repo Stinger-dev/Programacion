@@ -6,7 +6,6 @@ for i in range (numero):
     
 input ("\n Pulsa para salir")    
 
-
 '''
 
 el poner el asterisco antes del tmp hace que la cadena se descomprima

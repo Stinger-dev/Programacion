@@ -8,18 +8,19 @@ match tipo:
         
     case "TRIANGULO":
         for i in range (numero):
-            print( (" " * ((numero-i)-1)) + ("*" * (1+i*2 )) + (" " * ((numero-i)-1)) )
+            print((" " * ((numero - i) - 1)) + ("*" * (1 + i * 2)) + (" " * ((numero - i) - 1)))
             
     case "ROMBO":
-        k=0
+        k = 0
         for i in range (numero):
-            print( (" " * ((numero-i)-1)) + ("*" * (1+i*2 )) + (" " * ((numero-i)-1)) )
+            print((" " * ((numero - i) - 1)) + ("*" * (1 + i * 2)) + (" " * ((numero - i) - 1)))
             
-            k= (1+i*2)-2
+            k = (1 + i * 2) - 2
             
         for i in range(numero):
-            print ((" " * (1+i)) + ("*" * (k-i*2)) + (" " * (1+i)))
+            print ((" " * (1 + i)) + ("*" * (k - i * 2)) + (" " * (1 + i)))
             
-            
-     
+    case _:
+        print(" Figura no valida")
+    
 input ("\n Pulsa para salir")   
