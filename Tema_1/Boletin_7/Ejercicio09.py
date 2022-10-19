@@ -1,3 +1,12 @@
+'''
+La aproximacion que es usado es, mas o menos, crear una figura de espacios dentro de una figura de espacios con un contorno de asteriscos
+
+Realmente lo unico variable en las mayoria de las posiciones son los espacios, los asteriscos suelen ser 2
+
+En las unicas posiciones en las que no son dos son al principio y al final asi que pongo un if para esas dos posiciones y ahi si que opero
+sobre la cantidad de asteriscos
+
+'''
 tipo = input(" Que figura hueca quires hueca? (Cuadrado, triangulo, rombo): ").upper()
 numero = int(input(" De que dimension quiere la figura?:"))
 

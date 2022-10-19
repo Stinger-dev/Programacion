@@ -1,3 +1,8 @@
+'''
+En este resolvemos la conjetura de Collatz
+
+'''
+
 numero = int(input(" Numero: "))
 
 historial = [numero]

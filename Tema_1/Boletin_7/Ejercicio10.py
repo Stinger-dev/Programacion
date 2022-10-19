@@ -1,3 +1,7 @@
+'''
+Este es exactamente igual que el anterior solo que cuando pondriamos el "*" ahora ponemos una variable que pedimos por pantalla
+
+'''
 tipo = input(" Que figura hueca quires hueca? (Cuadrado, triangulo, rombo): ").upper()
 numero = int(input(" De que dimension quiere la figura?:"))
 simbolo = input(" Caracter con el que hacer la figura: ")
@@ -26,6 +30,8 @@ match tipo:
             
     case "ROMBO": 
         
+        
+
         k = 0 
         for i in range (numero):
             

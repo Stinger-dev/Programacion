@@ -29,3 +29,11 @@ for i in range(numero):
 print(" ")
 
 input ("\n Pulsa para salir")  
+
+
+
+
+'''
+La estructura del end no me gusta mucho, es un poco fea, pero creo que es la mas facil para esa situacio
+
+'''

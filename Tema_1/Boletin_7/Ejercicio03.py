@@ -12,3 +12,9 @@ while numero != 0:
     numero = int(input(" Numero: "))    
 
 input ("\n Pulsa para salir")
+
+
+'''
+En este se podria hacer algunos de los calculos en el propio print, pero creo que asi esta "mejor" a nivel de limpieza en codigo
+
+'''

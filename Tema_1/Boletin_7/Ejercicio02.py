@@ -16,5 +16,15 @@ for n in range(cantidad):
         k += 1
      
 print("", *numeros)
+
+
     
 input ("\n Pulsa para salir") 
+
+'''
+Mi forma de solucionarlo es muy poco eficiente, hago muchas comprobaciones
+
+Otra menera mas eficiente sera, buscar el primer multipo y luego simplemente hacerle sumas a ese numero para encontrar mas 
+puede incluso que la solucion de la suma sea mas facil de  hacer
+
+'''

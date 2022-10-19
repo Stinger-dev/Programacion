@@ -9,7 +9,14 @@ creo otro for que segun las iteraciones vaya restandole desde fuera hacia dentro
 
 numero = int(input(" Dimension: "))
 print(f"\n Número {numero}:")
-fila = []
+fila = [] 
+
+'''
+En vez de esto, se podria usar una concatenacion de cadenas que viene a ser lo mismo y en vez de sumar, crear una variable contador 
+con la que ir sustituyendo los numeros en vez de restarle, no es muy distinto quitando eso
+
+''' 
+
 columnas = 2*numero-1
 orden = 0
 

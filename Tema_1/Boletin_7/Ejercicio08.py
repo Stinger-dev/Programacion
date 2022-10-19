@@ -1,3 +1,9 @@
+'''
+Opero sobre la cantidad de espacios y sobre la cantidad de asteriscos, la cantidad de asteriscos es inversamente proporcional a la de espacios
+
+
+'''
+
 numero = int(input(" Tamaño: "))
 tipo = input(" Que figura quires? (Cuadrado, triangulo, rombo): ").upper()
 
