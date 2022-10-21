@@ -1,18 +1,25 @@
 numero = int(input(" Indique el tamaño: "))
 
-tmp = 1
-print("a. ")
-for i in range(numero):
-    
-    print((5 ** i) * tmp, end=",")
-    tmp *= -1
-print("")
 
+cadena = []
 tmp = 1
-print("b. ")
+print(" a. ")
+for i in range(numero):
+    cadena.append((5 ** i) * tmp)
+    cadena.append(",")
+    tmp *= -1
+cadena = cadena[:len(cadena)-1]
+print(*cadena[:])
+
+
+
+cadena = []
+tmp = 1
+print(" b. ")
 for i in range(numero):
     
-    print(tmp, end=",")
+    cadena.append(tmp)
+    cadena.append(",")
     match tmp:
         case 1:
             tmp = -1
@@ -20,13 +27,18 @@ for i in range(numero):
             tmp = 0
         case _:
             tmp = 1 
-print("")
+cadena = cadena[:len(cadena)-1]
+print(*cadena[:])
 
-print("c. ")
+
+cadena = []
+print(" c. ")
 for i in range(numero):
     
-    print(3 ** i, end=",")
-print(" ")
+    cadena.append(3 ** i)
+    cadena.append(",")
+cadena = cadena[:len(cadena)-1]
+print(*cadena[:])
 
 input ("\n Pulsa para salir")  
 

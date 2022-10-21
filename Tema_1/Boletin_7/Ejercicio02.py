@@ -1,4 +1,4 @@
-numero1 = int(input(" Multiplos desdes: "))
+numero1 = int(input(" Multiplos desde: "))
 numero2 = int(input(" Multiplos de: "))
 
 cantidad = int(input(" Cuantos numeros quieres: "))
@@ -12,9 +12,10 @@ for n in range(cantidad):
     while not encontrado:
         if k % numero2 == 0:
             numeros.append(k)
+            numeros.append(",")
             encontrado = True
         k += 1
-     
+numeros = numeros[:len(numeros)-1]
 print("", *numeros)
 
 
