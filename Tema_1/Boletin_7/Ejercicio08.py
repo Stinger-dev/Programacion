@@ -21,7 +21,7 @@ match tipo:
         for i in range (numero):
             print((" " * ((numero - i) - 1)) + ("*" * (1 + i * 2)))
             
-            k = (1 + i * 2) - 2
+            k = (i * 2) - 1
             
         for i in range(numero):
             print ((" " * (1 + i)) + ("*" * (k - i * 2)))

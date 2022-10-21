@@ -30,8 +30,6 @@ match tipo:
             
     case "ROMBO": 
         
-        
-
         k = 0 
         for i in range (numero):
             
