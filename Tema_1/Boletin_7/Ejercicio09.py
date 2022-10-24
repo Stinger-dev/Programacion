@@ -7,8 +7,8 @@ En las unicas posiciones en las que no son dos son al principio y al final asi q
 sobre la cantidad de asteriscos
 
 '''
-tipo = input(" Que figura hueca quires hueca? (Cuadrado, triangulo, rombo): ").upper()
-numero = int(input(" De que dimension quiere la figura?:"))
+tipo = input(" Que figura hueca quires hueca? (Cuadrado, triangulo, rombo): ").upper().strip()
+numero = int(input(" De que dimension quiere la figura?: "))
 
 match tipo:
     case "CUADRADO":

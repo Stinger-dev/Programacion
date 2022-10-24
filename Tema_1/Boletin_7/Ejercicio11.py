@@ -8,7 +8,7 @@ creo otro for que segun las iteraciones vaya restandole desde fuera hacia dentro
 '''
 
 numero = int(input(" Dimension: "))
-print(f"\n Número {numero}:")
+print(f"\n Número {numero}: ")
 fila = [] 
 
 '''

@@ -5,7 +5,7 @@ Opero sobre la cantidad de espacios y sobre la cantidad de asteriscos, la cantid
 '''
 
 numero = int(input(" Tamaño: "))
-tipo = input(" Que figura quires? (Cuadrado, triangulo, rombo): ").upper()
+tipo = input(" Que figura quires? (Cuadrado, triangulo, rombo): ").upper().strip()
 
 match tipo:
     case "CUADRADO":

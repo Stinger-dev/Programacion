@@ -2,9 +2,9 @@
 Este es exactamente igual que el anterior solo que cuando pondriamos el "*" ahora ponemos una variable que pedimos por pantalla
 
 '''
-tipo = input(" Que figura hueca quires hueca? (Cuadrado, triangulo, rombo): ").upper()
-numero = int(input(" De que dimension quiere la figura?:"))
-simbolo = input(" Caracter con el que hacer la figura: ")
+tipo = input(" Que figura hueca quires hueca? (Cuadrado, triangulo, rombo): ").upper().strip()
+numero = int(input(" De que dimension quiere la figura?: "))
+simbolo = input(" Caracter con el que hacer la figura: ").strip()
 
 match tipo:
     case "CUADRADO":

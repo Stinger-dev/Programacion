@@ -42,3 +42,73 @@ else:
     print(" Mes o dia no validos")
     
 input ("\n Pulsa para salir")
+
+'''
+----------------------------------------------------------------------------------------------------------
+
+        VERSION UN POCO MAS SIMPLIFICADA QUE QUITA LA MATRIZ Y DEJA UN SOLO VECTOR
+En verdad la primera fila de la matriz nunca la usaba, asi que es mejor quitarla para mejorar un poco el codigo
+
+
+
+agno = int(input(" Año: "))
+mes = int(input(" Mes: "))
+dia = int(input(" Dia: "))
+diasTotal = 0
+mesesValidos = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+if (((agno % 4 == 0 and agno % 100 != 0) or (agno % 400 == 0))and mes >= 2):  # Con esto calculo si le cambio el numero maximo de dias a febrerp
+        diasTotal = 1
+        mesesValidos[1] = 29
+
+if (1 <= dia <= mesesValidos[mes - 1]) and (1 <= mes <= 12): 
+    dias_hasta_el_mes = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334] 
+    diasTotal = (dia - 1) + dias_hasta_el_mes[mes - 1] + diasTotal
+    
+    print(f" Han pasado {diasTotal} dias, desde el uno de enero de ese mismo año")
+    
+else:
+    print(" Mes o dia no validos")
+    
+input ("\n Pulsa para salir")
+----------------------------------------------------------------------------------------------------------
+
+            VERSION ANTERIOR PERO CON EL CALCULO AUTOMATICO DEL VECTOR DE LOS DIAS DE LOS MESES
+            
+agno = int(input(" Año: "))
+mes = int(input(" Mes: "))
+dia = int(input(" Dia: "))
+diasTotal = 0
+mesesValidos = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+if (((agno % 4 == 0 and agno % 100 != 0) or (agno % 400 == 0))and mes >= 2):  # Con esto calculo si le cambio el numero maximo de dias a febrerp
+        diasTotal = 1
+        mesesValidos[1] = 29
+
+if (1 <= dia <= mesesValidos[mes - 1]) and (1 <= mes <= 12): 
+
+    dias_hasta_el_mes = [0]
+    tmp=0    
+    for n in range(mes): 
+        tmp = tmp + mesesValidos[n]
+        dias_hasta_el_mes.append(tmp)    
+        
+    diasTotal = (dia - 1) + dias_hasta_el_mes[mes - 1] + diasTotal
+    
+    print(f" Han pasado {diasTotal} dias, desde el uno de enero de ese mismo año")
+    
+else:
+    print(" Mes o dia no validos")
+    
+input ("\n Pulsa para salir")
+
+----------------------------------------------------------------------------------------------------------
+
+
+'''
+
+
+
+
+
+
