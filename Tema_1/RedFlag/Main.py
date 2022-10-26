@@ -47,33 +47,52 @@ def juego(nJugadores):
             
     else:
         
-        print(" Not enought players, at least 3 players, 2 makers and 1 who choose the winnern\n")
-    
-
+        input(" Not enought players, at least 3 players, 2 makers and 1 who choose the winnern\n")
+        
 def agnadir():
         
     eleccion = input(" Press G to add GreenFlags, press R to add RedFlags or press Q to quit").upper().strip()
     
+    tmp = '0'
     if eleccion == "G":
         archivo = open("bueno.txt","a", encoding = 'utf-8')
+        tmp = '1'
     elif eleccion == "R":
         archivo = open("malo.txt","a", encoding = 'utf-8')
+        tmp = '1'
     elif eleccion == "Q":
         print("") 
         
-    tmp = '1'
     while tmp != '0':
-        tmp = input(" Indique la frase que quiere añadir (ponga solo 0 para salir): ").strip()
+        tmp = input(" Type the new line (type just 0 to exit): ").strip()
         if tmp != '0': 
             archivo.write(tmp)
-      
-      
-            
-eleccion = input(" P to play and A to add: ").upper().strip()
-if eleccion == 'A':
-    agnadir()
-else:
-    nJugadores = int (input(" players: "))
-    juego(nJugadores)
+    
+    input("Press enter to continue")
+    
+def menu():        
+    eleccion = input(" P to play, A to add a line or Q to exit: ").upper().strip()
+    
+        
+    match eleccion:
+        case 'A':
+            agnadir()
+            os.system(limpiar)
+            menu()
+        case 'P':
+            nJugadores = int (input(" players: "))
+            juego(nJugadores)
+            os.system(limpiar)
+            menu()
+        case 'Q':
+            return 0
+        case _:
+            input(" Not valid selection, press enter to continue")
+            os.system(limpiar)  
+            menu()
  
+ 
+menu()
+
+
 input("Press enter to exit")
