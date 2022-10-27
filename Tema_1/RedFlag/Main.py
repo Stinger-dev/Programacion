@@ -48,6 +48,7 @@ def juego(nJugadores):
     else:
         
         input(" Not enought players, at least 3 players, 2 makers and 1 who choose the winnern\n")
+ 
         
 def agnadir():
         
@@ -70,9 +71,10 @@ def agnadir():
     
     input("Press enter to continue")
     
+    
 def menu():        
     eleccion = input(" P to play, A to add a line or Q to exit: ").upper().strip()
-    
+
         
     match eleccion:
         case 'A':
