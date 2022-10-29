@@ -11,6 +11,7 @@ separador = ' -> '
 for n in range(len(fibonacci)):
     cadena += str(fibonacci[n]) + separador
 cadena = cadena[:(-len(separador))]
+#Todo esto no es necesario
 
 print(cadena)
 
