@@ -5,7 +5,7 @@ total = 0
 tamagno = 995
 
 
-for n in range(1000000):
+for n in range(100000):
     
     inicio = time.time()
     #-------------------------------------------------------

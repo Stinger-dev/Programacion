@@ -1,6 +1,6 @@
 import time
 
-k=0
+k=0 
 total = 0
 tamagno = 999
 
@@ -13,8 +13,9 @@ def fibonacci (k, tmp=[1,1]):
 
 
 
-for n in range(1000000):
+for n in range(100000):
     inicio = time.time()
+    
     #-------------------------------------------------------
     
     fibonacci(tamagno)

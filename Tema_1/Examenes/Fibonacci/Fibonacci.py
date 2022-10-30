@@ -14,4 +14,3 @@ cadena = cadena[:(-len(separador))]
 #Todo esto no es necesario
 
 print(cadena)
-
