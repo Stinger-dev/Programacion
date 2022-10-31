@@ -13,7 +13,7 @@ def fibonacci (k, tmp=[1,1]):
 
 
 
-for n in range(100000):
+for n in range(10000000):
     inicio = time.time()
     
     #-------------------------------------------------------

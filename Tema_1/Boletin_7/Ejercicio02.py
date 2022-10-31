@@ -15,8 +15,10 @@ for n in range(cantidad):
             numeros.append(",")
             encontrado = True
         k += 1
-numeros = numeros[:len(numeros)-1]
-print("", *numeros)
+numeros = numeros[:-1]
+numeros = map(str, numeros)
+print("".join(numeros))
+
 
 
     
