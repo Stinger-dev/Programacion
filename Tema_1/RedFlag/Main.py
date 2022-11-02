@@ -50,7 +50,7 @@ def juego(nJugadores):
         input(" Not enought players, at least 3 players, 2 makers and 1 who choose the winnern\n")
  
         
-def agnadir():
+def agnadir(): #Realmente esto no funcina, pero no me manejo bien con las escrituras en archivo usando python
         
     eleccion = input(" Press G to add GreenFlags, press R to add RedFlags or press Q to quit").upper().strip()
     
@@ -68,6 +68,7 @@ def agnadir():
         tmp = input(" Type the new line (type just 0 to exit): ").strip()
         if tmp != '0': 
             archivo.write(tmp)
+    archivo.close()
     
     input("Press enter to continue")
     
