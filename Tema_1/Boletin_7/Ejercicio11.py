@@ -17,7 +17,7 @@ con la que ir sustituyendo los numeros en vez de restarle, no es muy distinto qu
 
 ''' 
 
-columnas = 2*numero-1
+columnas = 2*numero-1 #El numero de columnas siempre es 2n-1 
 orden = 0
 
 for n in range(columnas):
@@ -27,7 +27,9 @@ for n in range ((columnas+1)//2):
     
     for j in range(n,len(fila)-n):
         
-        fila [j] = fila [j]-1
+        #Al haberle añadido un +1 en el valor de las filas puedo empezar restando directamente sin expeccion a la primera fila
+        fila [j] = fila [j]-1  
+        #Aunque tambien se podria hacer simplemente cambiado el orden del print tambien se podria hacer, quiza lo hago algun dia
         
     print(*fila [:])
     

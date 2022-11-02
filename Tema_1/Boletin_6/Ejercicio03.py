@@ -5,7 +5,7 @@ while iteraciones < 0:
 
 for n in range(iteraciones):
     
-    numero = int(input(" Enter one num    ber greater than 0: "))
+    numero = int(input(" Enter one number greater than 0: "))
     
     while numero <= 0:
         numero = int(input(" The number is not valid, it should be greater than 0: "))

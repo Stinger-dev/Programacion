@@ -5,7 +5,7 @@ while numero < 0:
 
 suma = 0
 
-for n in range((numero // 2) + 1, 0, -1):
+for n in range((numero // 2) + 1, 0, -1): 
     
     if numero % n == 0:
         suma = suma + n
