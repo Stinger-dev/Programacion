@@ -1,6 +1,6 @@
 lista = [12,40,50,70,100,110]
 
-def estaordenada(aL = []):
+def estaOrdenada(aL = []):
     encontrada = True
     k = 0
     while (not (encontrada) and (k < (len(aL)-1))):
@@ -11,4 +11,4 @@ def estaordenada(aL = []):
     return encontrada
 
 
-print(estaordenada(lista))
+print(estaOrdenada(lista))
