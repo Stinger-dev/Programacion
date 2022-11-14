@@ -2,16 +2,16 @@ a = ['a','b','c',2,4]
 
 b = ['1', 'b',7,2]
 
-def intersect(aList, bList):
+def unionListas(aList, bList):
     tmp = []
     for n in aList:
-        if n in bList:
+        if n not in bList:
             tmp.append(n)
     for i in bList:
-        if ((i in aList) and (i not in tmp)):
+        if i not in aList:
             tmp.append(i)
     
     return tmp
 
-print(intersect(a, b))
+print(unionListas(a, b))
     
