@@ -4,8 +4,6 @@ while tmp>= 0:
     numeros.append(tmp)  
     tmp = int(input(' Numero:'))
 
-  
-
 
 def esPrimo(num):    
     valido = True
