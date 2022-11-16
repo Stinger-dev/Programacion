@@ -2,7 +2,7 @@ dia = 15
 mes = 3
 agno = 2022
 
-
+meses = ['enero','febrero','marzo','abril','mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre','diciembre']
 
 def listaDiasAgno(agno):
     
@@ -11,11 +11,14 @@ def listaDiasAgno(agno):
         dias[1]=29
     return dias
 
+while ( not(0 < mes <= 12) and (mes > 0) ):
+    mes = input(' Mes no valido, pruebe de nuevo')
 
-while dia > 0 and mes > 0 and agno > 0:
-    agno = int(input(' Año:')) #preguntar si quiere validemos las cosas como vamos a salir si no le dejamos poner numeros negativos
-    validos = listaDiasAgno(agno)
+if mes > 0:
+    while ( not(0 < mes <= 12) and (mes > 0) ):
+        mes = input(' Año no valido, pruebe de nuevo')   
     
-    dia = int(input(' Dia:'))
-    mes = int(input(' Mes:'))
-
+    else:
+        while dia > listaDiasAgno(agno)[mes+1]:
+            dia = input(' Dia no valido, pruebe de nuevo')
+            
