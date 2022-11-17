@@ -33,7 +33,7 @@ def decimalValido (cad):
     k = 0
     cad = cad.upper()
     while k<len(cad[:-1]) and valido:
-        if cad[k] not in map(str,[0,1,2,3,4,5,6,7,8,9]):
+        if not (cad[k].isnumeric()):
             valido = False
         k += 1
     if valido and cad[-1] != 'D':
@@ -60,9 +60,11 @@ def decimal2binario (cad):
     return tmp
 
 print(' Conversor binario-decimal y decimal-binario')
-cadena = input(' Introduzca el numero (formato 120D o 010101B):')
+cadena = input(' Introduzca el numero (formato 120D o 010101B): ')
 
 if binarioValido(cadena):
-    print(binario2decimal(cadena))
+    print(f' {cadena[:-1]} en decimal es {binario2decimal(cadena)}')
 elif decimalValido(cadena):
-    print(decimal2binario(cadena))
+    print(f' {cadena[:-1]} en binario es {decimal2binario(cadena)}')
+else:
+    print(' No validos')

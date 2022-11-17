@@ -22,7 +22,6 @@ def listaValida(aList):
     return True
 
 
-
 if listaValida(nombres):
     if nombreValido(inicial):
         print(nombresInicial(nombres, inicial))

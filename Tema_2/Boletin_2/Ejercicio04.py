@@ -2,6 +2,8 @@ day = 7
 month = 9
 year = 2002
 
+
+
 def getDayOfWeek(year,month,day):
     days = ['Sunday','Monday', 'Tuesday', 'Wednesday','Thursday','Friday', 'Saturday']
     a = ((14 - month) / 12)
