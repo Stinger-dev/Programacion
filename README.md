@@ -28,5 +28,24 @@
 ### [Boletin_7](https://github.com/Stinger-dev/Programacion/tree/master/Tema_1/Boletin_7)
    Un boletin de ampliacion que termina con un nivel bastante mas avanzado que el anterior
    
+### [Examenes]([https://github.com/Stinger-dev/Programacion/tree/master/Tema_1/Boletin_7](https://github.com/Stinger-dev/Programacion/tree/master/Tema_1/Examenes))
+   Examenes y pruebas que hemos hecho en este tema
+   
+**Los siguientes codigos hasta el Tema_2 no pertenecen a clase sino son proyectos aparte**
+### [Palabras](https://github.com/Stinger-dev/Programacion/tree/master/Tema_1/Palabras)
+   Es un ejercicio en el que intento buscar 5 palabras de 5 letras que rellenen 25 de las 26 palabras del abcedario ingles (_**No esta terminado**_)
+   
+### [RedFlags](https://github.com/Stinger-dev/Programacion/tree/master/Tema_1/RedFlag)
+   Juego de consola de comando en el que hay un jugador al que el resto de jugadores tienen que hacerle la mejor pareja posible segun las cartas que les hayan tocado 
+   
 ## [Tema_2](https://github.com/Stinger-dev/Programacion/tree/master/Tema_2)
    Empezamos con la programacion estructurada (de manera oficial)
+   
+### [Boletin_1](https://github.com/Stinger-dev/Programacion/tree/master/Tema_2/Boletin_1)
+   Primera toma de contacto (oficial) con el uso de funciones en python
+   
+### [Boletin_2](https://github.com/Stinger-dev/Programacion/tree/master/Tema_2/Boletin_2)
+   Mas o menos igual que el boletin_1 del mismo tema pero siendo en ingles 
+   
+   
+   
