@@ -2,7 +2,7 @@ day = 7
 month = 9
 year = 2002
 
-
+#no terminado, no entiendo qeu esta pasando
 
 def getDayOfWeek(year,month,day):
     days = ['Sunday','Monday', 'Tuesday', 'Wednesday','Thursday','Friday', 'Saturday']
