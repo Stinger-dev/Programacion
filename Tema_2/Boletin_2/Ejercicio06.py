@@ -1,5 +1,5 @@
 
-#pendiente de revision
+#Creo que ya esta, epro no es 100% 
 
 def getNumberOfDigitsDecimal(cad):
     cad = str(cad)
@@ -8,8 +8,11 @@ def getNumberOfDigitsDecimal(cad):
     for n in range(len(cad)):
         if cad[n].isnumeric():
             k +=1
-        elif cad[n] == '.' and not decimal and (n != (len(cad)-1)) and ((n != 0) and (n == 1 and (cad [0] not in '+-'))):
-            decimal = True
+        elif cad[n] == '.' and not decimal and (n != (len(cad)-1)) and (n != 0):
+            if (n == 1 and (cad [0] in '+-')):
+                return None
+            else:
+                decimal = True
         elif (cad[n] == '+' or cad[n] == '-') and n == 0:
             pass
         else:
@@ -23,8 +26,11 @@ def getNumberOfDigitsBinary(cad):
     for n in range(len(cad)):
         if cad[n] in '01':
             k +=1
-        elif cad[n] == '.' and not decimal:
-            decimal = True
+        elif cad[n] == '.' and not decimal and (n != (len(cad)-1)) and (n != 0):
+            if (n == 1 and (cad [0] in '+-')):
+                return None
+            else:
+                decimal = True
         elif (cad[n] == '+' or cad[n] == '-') and n == 0:
             pass
         else:
@@ -38,8 +44,11 @@ def getNumberOfDigitsOctal(cad):
     for n in range(len(cad)):
         if cad[n] in '01234567':
             k +=1
-        elif cad[n] == '.' and not decimal:
-            decimal = True
+        elif cad[n] == '.' and not decimal and (n != (len(cad)-1)) and (n != 0):
+            if (n == 1 and (cad [0] in '+-')):
+                return None
+            else:
+                decimal = True
         elif (cad[n] == '+' or cad[n] == '-') and n == 0:
             pass
         else:
@@ -53,8 +62,11 @@ def getNumberOfDigitsHexa(cad):
     for n in range(len(cad)):
         if cad[n] in '01234567890ABCDEF':
             k +=1
-        elif cad[n] == '.' and not decimal:
-            decimal = True
+        elif cad[n] == '.' and not decimal and (n != (len(cad)-1)) and (n != 0):
+            if (n == 1 and (cad [0] in '+-')):
+                return None
+            else:
+                decimal = True
         elif (cad[n] == '+' or cad[n] == '-') and n == 0:
             pass
         else:
