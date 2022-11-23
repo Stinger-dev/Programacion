@@ -1,5 +1,5 @@
 
-#Creo que ya esta, epro no es 100% 
+#Creo que ya esta, pero no es 100% 
 
 def getNumberOfDigitsDecimal(cad):
     cad = str(cad)

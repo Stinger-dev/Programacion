@@ -1,11 +1,3 @@
-'''
-
-x = (-b+(((b**2)-(4*a*c))**(1/2)))/(2*a)
-x = (-b-(((b**2)-(4*a*c))**(1/2)))/(2*a)        
-'''
-
-
-
 def numeroValido (cad):
     cad = str(cad)
     decimal = False
