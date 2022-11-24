@@ -5,7 +5,6 @@ x = (-b-(((b**2)-(4*a*c))**(1/2)))/(2*a)
 '''
 
 
-
 def numeroValido (cad):
     cad = str(cad)
     decimal = False
@@ -21,15 +20,16 @@ def numeroValido (cad):
     return int(cad)
 
 
-def solveSecondOrderEquation(a,b,c):
+def solveSecondOrderEquation(a, b, c):
     
-    if numeroValido(a) != None and numeroValido(b) != None and numeroValido(c) != None and ((b**2)-(4*a*c))>0 :
-        resultado = [((-b+(((b**2)-(4*a*c))**(1/2)))/(2*a)), ((-b-(((b**2)-(4*a*c))**(1/2)))/(2*a))]
+    if numeroValido(a) != None and numeroValido(b) != None and numeroValido(c) != None and ((b ** 2) - (4 * a * c)) > 0:
+        resultado = [((-b + (((b ** 2) - (4 * a * c)) ** (1 / 2))) / (2 * a)), ((-b - (((b ** 2) - (4 * a * c)) ** (1 / 2))) / (2 * a))]
     else:
         resultado = None
         
     return resultado
+
     
-print(solveSecondOrderEquation(1,-5,6) == [3,2])
-print(solveSecondOrderEquation(2,-7,3) == [3,1/2])
-print(solveSecondOrderEquation(-1,7,-10) == [2,5])
+print(solveSecondOrderEquation(1, -5, 6) == [3, 2])
+print(solveSecondOrderEquation(2, -7, 3) == [3, 1 / 2])
+print(solveSecondOrderEquation(-1, 7, -10) == [2, 5])

@@ -1,14 +1,15 @@
 
-#Creo que ya esta, epro no es 100% 
+# Creo que ya esta, epro no es 100% 
+
 
 def getNumberOfDigitsDecimal(cad):
     cad = str(cad)
-    k=0
+    k = 0
     decimal = False
     for n in range(len(cad)):
         if cad[n].isnumeric():
-            k +=1
-        elif cad[n] == '.' and not decimal and (n != (len(cad)-1)) and (n != 0):
+            k += 1
+        elif cad[n] == '.' and not decimal and (n != (len(cad) - 1)) and (n != 0):
             if (n == 1 and (cad [0] in '+-')):
                 return None
             else:
@@ -18,15 +19,16 @@ def getNumberOfDigitsDecimal(cad):
         else:
             return None
     return k
+
 
 def getNumberOfDigitsBinary(cad):
     cad = str(cad)
-    k=0
+    k = 0
     decimal = False
     for n in range(len(cad)):
         if cad[n] in '01':
-            k +=1
-        elif cad[n] == '.' and not decimal and (n != (len(cad)-1)) and (n != 0):
+            k += 1
+        elif cad[n] == '.' and not decimal and (n != (len(cad) - 1)) and (n != 0):
             if (n == 1 and (cad [0] in '+-')):
                 return None
             else:
@@ -36,15 +38,16 @@ def getNumberOfDigitsBinary(cad):
         else:
             return None
     return k
+
 
 def getNumberOfDigitsOctal(cad):
     cad = str(cad)
-    k=0
+    k = 0
     decimal = False
     for n in range(len(cad)):
         if cad[n] in '01234567':
-            k +=1
-        elif cad[n] == '.' and not decimal and (n != (len(cad)-1)) and (n != 0):
+            k += 1
+        elif cad[n] == '.' and not decimal and (n != (len(cad) - 1)) and (n != 0):
             if (n == 1 and (cad [0] in '+-')):
                 return None
             else:
@@ -55,14 +58,15 @@ def getNumberOfDigitsOctal(cad):
             return None
     return k
 
+
 def getNumberOfDigitsHexa(cad):
     cad = str(cad).upper()
-    k=0
+    k = 0
     decimal = False
     for n in range(len(cad)):
         if cad[n] in '01234567890ABCDEF':
-            k +=1
-        elif cad[n] == '.' and not decimal and (n != (len(cad)-1)) and (n != 0):
+            k += 1
+        elif cad[n] == '.' and not decimal and (n != (len(cad) - 1)) and (n != 0):
             if (n == 1 and (cad [0] in '+-')):
                 return None
             else:
@@ -72,7 +76,6 @@ def getNumberOfDigitsHexa(cad):
         else:
             return None
     return k  
-
 
 
 print(getNumberOfDigitsDecimal('-10'))
