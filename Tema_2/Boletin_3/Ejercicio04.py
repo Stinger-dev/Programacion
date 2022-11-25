@@ -3,7 +3,7 @@ def numberInString(cad, num):
     num = str(num)
     for n in cad:
         if n == num:
-            k +=1
+            k += 1
     return k
 
 

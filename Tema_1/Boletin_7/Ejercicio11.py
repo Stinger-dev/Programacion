@@ -37,6 +37,7 @@ for n in range ((columnas)//2,0,-1):
     
     for j in range(n,len(fila)-n):
         
+        
         fila [j] = fila [j]+1
         
     print(*fila [:])

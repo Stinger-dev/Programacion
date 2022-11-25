@@ -1,12 +1,13 @@
 from random import randint
 
 
-def listaAleatoria (cantidad = 100, inicial=0,final=1000):
+def listaAleatoria (cantidad=100, inicial=0, final=1000):
     tmp = []
     for n in range(cantidad):
-        tmp.append(randint(inicial,final))
-        n=n  #no hace nada, solo no quiero que me detecte la n como variable no usada pq me da toc el colorcito :(
+        tmp.append(randint(inicial, final))
+        n = n  # no hace nada, solo no quiero que me detecte la n como variable no usada pq me da toc el colorcito :(
     return tmp
+
 
 def mayor(tmp): 
     n = tmp[0]
@@ -15,6 +16,7 @@ def mayor(tmp):
             n = i
     return n
 
+
 def menor (tmp): 
     n = tmp[0]
     for i in tmp:
@@ -22,8 +24,10 @@ def menor (tmp):
             n = i
     return n
 
+
 def media (tmp):
     return (sumatorio(tmp) / len(tmp))
+
 
 def sumatorio (tmp):
     n = 0
@@ -32,14 +36,16 @@ def sumatorio (tmp):
     return n
 
 
-def sustituir(sustituido,sustituto, tmp = []):
+def sustituir(sustituido, sustituto, tmp=[]):
     for n in range(len(tmp)):
         if tmp[n] == sustituido:
             tmp[n] = sustituto 
     return(tmp)
+
     
-def numeros (tmp = []):
+def numeros (tmp=[]):
     print(tmp)
+
 
 def menu(numero):
     print('a. Conocer el mayor')
@@ -54,7 +60,7 @@ def menu(numero):
     match opcion:
         case 'A':
             print(mayor(numero))
-            menu(numero)
+            menu    (numero)
         case 'B':
             print(menor(numero))
             menu(numero)
@@ -80,7 +86,7 @@ def menu(numero):
             
         case _:
             print(' Opcion no valida \n')
-            menu(numero = listaAleatoria() )
+            menu(numero=listaAleatoria())
 
 
 numero = listaAleatoria()         

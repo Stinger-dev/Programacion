@@ -2,8 +2,8 @@ def binarioValido (cad):
     valido = True
     k = 0
     cad = cad.upper()
-    while k<len(cad[:-1]) and valido:
-        if cad[k] not in map(str,[0,1]):
+    while k < len(cad[:-1]) and valido:
+        if cad[k] not in map(str, [0, 1]):
             valido = False
         k += 1
     if valido and cad[-1] != 'B':
@@ -11,11 +11,13 @@ def binarioValido (cad):
          
     return valido
 
+
 def invertirCadena (cad):
     tmp = ''
-    for n in range(len(cad)-1,-1,-1):
+    for n in range(len(cad) - 1, -1, -1):
         tmp = tmp + cad[n]
     return tmp
+
 
 def binario2decimal(cad):
     tmp = 1
@@ -24,15 +26,16 @@ def binario2decimal(cad):
       
     for n in range(len(cad)):
         if cad[n] == '1':
-            tmp += 2**n
+            tmp += 2 ** n
             
-    return (tmp -1)
+    return (tmp - 1)
+
 
 def decimalValido (cad):
     valido = True
     k = 0
     cad = cad.upper()
-    while k<len(cad[:-1]) and valido:
+    while k < len(cad[:-1]) and valido:
         if not (cad[k].isnumeric()):
             valido = False
         k += 1
@@ -41,23 +44,26 @@ def decimalValido (cad):
          
     return valido
 
+
 def maximoBinario(num):
     maximoValor = 0
-    while (2**(maximoValor+1)) <= num:
+    while (2 ** (maximoValor + 1)) <= num:
         maximoValor += 1
     return maximoValor
+
     
 def decimal2binario (cad):
     num = int(cad[:-1])
     tmp = ''
-    maxi =  maximoBinario(num)   
-    for n in range(maxi,-1,-1):
-        if (num - 2**n) >= 0:
+    maxi = maximoBinario(num)   
+    for n in range(maxi, -1, -1):
+        if (num - 2 ** n) >= 0:
             tmp += '1'
-            num = (num - 2**n) 
+            num = (num - 2 ** n) 
         else:
             tmp += '0'
     return tmp
+
 
 print(' Conversor binario-decimal y decimal-binario')
 cadena = input(' Introduzca el numero (formato 120D o 010101B): ')

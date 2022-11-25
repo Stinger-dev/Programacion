@@ -2,18 +2,21 @@ nombres = ['Lucia', 'Ana', 'Sandra']
 
 inicial = 'L'
 
+
 def nombresInicial(aList, inicial):
     tmp = []
     for n in aList:
         if n[0].upper() == inicial.upper():
             tmp.append(n)
     return tmp
+
  
 def nombreValido(cad):
     for n in cad:
         if not (n.isalpha()):
             return False
     return True
+
 
 def listaValida(aList):
     for n in aList:

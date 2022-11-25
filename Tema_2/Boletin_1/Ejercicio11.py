@@ -1,6 +1,7 @@
-a = ['a','b','c',2,4]
+a = ['a', 'b', 'c', 2, 4]
 
-b = ['1', 'b',7,2]
+b = ['1', 'b', 7, 2]
+
 
 def intersect(aList, bList):
     tmp = []
@@ -12,6 +13,7 @@ def intersect(aList, bList):
             tmp.append(i)
     
     return tmp
+
 
 print(intersect(a, b))
     
