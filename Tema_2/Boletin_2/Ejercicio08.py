@@ -5,19 +5,20 @@ x = (-b-(((b**2)-(4*a*c))**(1/2)))/(2*a)
 '''
 
 
-def numeroValido (cad):
+def numeroValido(cad):
     cad = str(cad)
     decimal = False
     for n in range(len(cad)):
-        if cad[n].isnumeric():
+        if (cad[n] in '1234567890') or ((cad[n] == '+' or cad[n] == '-') and n == 0):
             pass
-        elif cad[n] == '.' and not decimal:
-            decimal = True
-        elif (cad[n] == '+' or cad[n] == '-') and n == 0:
-            pass
+        elif cad[n] == '.' and not decimal and (n != (len(cad) - 1)) and (n != 0):
+            if (n == 1 and (cad [0] in '+-')):
+                return None
+            else:
+                decimal = True
         else:
             return None
-    return int(cad)
+    return True
 
 
 def solveSecondOrderEquation(a, b, c):

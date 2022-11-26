@@ -1,3 +1,6 @@
+
+
+
 def encontrarPalabras(frase, buscar):  # devuelve una lista con la posicion inical de una cedena todas las veces que aparezca, -1 si no existe
     solucion = -1
     buscar = ' ' + buscar + ' '  # asi me aseguro que sea una palabra, ya que esta buscando por esa secuencia de caracteres y esten separados por estacios

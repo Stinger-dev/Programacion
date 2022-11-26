@@ -1,5 +1,4 @@
-
-# Creo que ya esta, epro no es 100% 
+# Creo que ya esta, pero no es 100% 
 
 
 def getNumberOfDigitsDecimal(cad):
@@ -7,7 +6,7 @@ def getNumberOfDigitsDecimal(cad):
     k = 0
     decimal = False
     for n in range(len(cad)):
-        if cad[n].isnumeric():
+        if cad[n] in '1234567890':
             k += 1
         elif cad[n] == '.' and not decimal and (n != (len(cad) - 1)) and (n != 0):
             if (n == 1 and (cad [0] in '+-')):

@@ -1,10 +1,3 @@
-
-'''
-la suma de los divisores es igual al otro y viceversa
-ni idea si es asi, lo tengo que buscar en google
-'''
-
-
 def getDivisor(a):
     tmp = []
     for n in range(1, a):
