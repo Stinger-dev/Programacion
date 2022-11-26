@@ -6,5 +6,5 @@ def charactersInString(cad, char):
             k += 1
     return k
 
-    
+
 print(charactersInString('hola', 'l'))

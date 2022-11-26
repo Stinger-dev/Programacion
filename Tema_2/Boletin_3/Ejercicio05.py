@@ -3,7 +3,7 @@ def palindrome(cad):
     encontrado = False
     cad = cad.lower().strip()
     while not(encontrado) and k < len(cad) // 2:
-        if cad[k] != cad[-k - 1]:
+        if cad[k] != cad[-k-1]: #accedemos a las ultimas posiciones de la cadena pero hay que restarle una porque empieza a contar desde -1 y no desde 0
             encontrado = True
         k += 1
         

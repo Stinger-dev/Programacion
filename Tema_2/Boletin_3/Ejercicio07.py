@@ -1,4 +1,7 @@
-
+'''
+Este tambien hay que modificarlo porque el maestro quiere que creeemos nuestra propia funcion que busqeu la palabra en la cadena
+en vez de usar el .find() o .index(), aunque sean cosas que hemos dado en teoria
+'''
 
 
 def encontrarPalabras(frase, buscar):  # devuelve una lista con la posicion inical de una cedena todas las veces que aparezca, -1 si no existe

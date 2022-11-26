@@ -1,3 +1,7 @@
+'''
+En esta hay que modificar cosas, pq al aprecer para que este escondida tiene que que tambien estar en orden, no solo aparecer
+'''
+
 def estaEscondida(cad, buscar):
     encontrada = True
     k = 0

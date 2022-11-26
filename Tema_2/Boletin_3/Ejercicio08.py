@@ -8,5 +8,4 @@ def vocalesDistintas(cad):
     return len(tmp)
 
 
-print(vocalesDistintas('abaco'))            
-    
+print(vocalesDistintas('abaco'))
