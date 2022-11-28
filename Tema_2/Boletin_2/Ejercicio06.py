@@ -1,5 +1,3 @@
-# Creo que ya esta, pero no es 100% 
-
 
 def getNumberOfDigitsDecimal(cad):
     cad = str(cad)

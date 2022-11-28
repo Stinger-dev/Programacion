@@ -1,8 +1,3 @@
-'''
-Este tambien hay que modificarlo porque el maestro quiere que creeemos nuestra propia funcion que busqeu la palabra en la cadena
-en vez de usar el .find() o .index(), aunque sean cosas que hemos dado en teoria
-'''
-
 def estaPalabra(cad, buscar):   #Ya es menos spaghetti y esta mas optimizado
     encontrado = False
     k = 0

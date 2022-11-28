@@ -1,3 +1,10 @@
+def numeroValido(cad):
+    cad = str(cad)
+    for n in range(len(cad)):
+        if (cad[n] not in '1234567890'):
+            return None
+    return True
+
 def isPrimer(num):
     encontrado = False
     k = 2
@@ -9,11 +16,14 @@ def isPrimer(num):
 
 
 def getPrimeDivisors(num):
-    tmp = []
-    for n in range (1, (num + 1) // 2):
-        if num % n == 0:
-            if isPrimer(n):
-                tmp.append(n)
+    if numeroValido(num):
+        tmp = []
+        for n in range (1, (num + 1) // 2):
+            if num % n == 0:
+                if isPrimer(n):
+                    tmp.append(n)
+    else:
+        tmp = None
     return tmp
 
     

@@ -1,9 +1,6 @@
-day = 7
-month = 9
-year = 2002
-
-# no terminado, no entiendo qeu esta pasando
-
+day = 28
+month = 11
+year = 2022
 
 def getDayOfWeek(year, month, day):
     days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
@@ -13,6 +10,5 @@ def getDayOfWeek(year, month, day):
     d = int((day + y + y // 4 - y // 100 + y // 400 + (31 * m) // 12) % 7)
     
     return days[d]
-
 
 print(getDayOfWeek(year, month, day))
