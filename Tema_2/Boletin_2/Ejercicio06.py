@@ -1,4 +1,9 @@
 
+<<<<<<< .merge_file_Hy92IM
+=======
+#Creo que ya esta, pero no es 100% 
+
+>>>>>>> .merge_file_80ezU5
 def getNumberOfDigitsDecimal(cad):
     cad = str(cad)
     k = 0

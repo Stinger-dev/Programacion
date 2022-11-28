@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_rnpkiU
 '''
 
 x = (-b+(((b**2)-(4*a*c))**(1/2)))/(2*a)
@@ -6,6 +7,9 @@ x = (-b-(((b**2)-(4*a*c))**(1/2)))/(2*a)
 
 
 def numeroValido(cad):
+=======
+def numeroValido (cad):
+>>>>>>> .merge_file_NXMxus
     cad = str(cad)
     decimal = False
     for n in range(len(cad)):
