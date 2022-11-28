@@ -1,16 +1,18 @@
-'''
-En esta hay que modificar cosas, pq al aprecer para que este escondida tiene que que tambien estar en orden, no solo aparecer
-'''
+#ya esta hecho como queria el maestro
 
 def estaEscondida(cad, buscar):
-    encontrada = True
     k = 0
-    while encontrada and k < len(buscar):
-        if buscar[k] not in cad:
-            encontrada = False
-        else:
-            k += 1
-    return encontrada
+    solucion = False
+    for n in cad:
+        if k<len(buscar) and n == buscar[k]:
+            k+=1
+        
+    if k == len(buscar):
+        solucion = True
+    
+    return solucion
 
-
-print(estaEscondida('hcjhgnhg', 'hola'))
+assert(estaEscondida('tdvoasvdoadvvadss', 'todos'))
+assert(not (estaEscondida('asdfaotasfdfdasdfos', 'todos')))
+assert(estaEscondida('hola', 'hola'))
+assert(not(estaEscondida('ohla', 'hola')))

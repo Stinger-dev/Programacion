@@ -6,4 +6,4 @@ def powerlt(a, b=0):
     return solucion
 
 
-print(powerlt(2,10))
+print(powerlt(2))
