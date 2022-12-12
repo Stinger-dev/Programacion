@@ -13,4 +13,8 @@ def perimetro_triangulo(a,b,c): #abc son los tres puntos que forman al triangulo
 
 def area_triangulo(a,b,c):
     s = perimetro_triangulo(a, b, c)/2
-    return ()**(1/2)
+    a = distancia_euclidea(a,b)
+    b = distancia_euclidea(c,b)
+    c = distancia_euclidea(c,a)
+    return (s*(s-a)*(s-b)*(a-c))**(1/2)
+

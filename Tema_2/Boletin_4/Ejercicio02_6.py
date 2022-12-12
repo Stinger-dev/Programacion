@@ -1,5 +1,3 @@
-
-
 def calcular_mcd (a,b):
     if a > b:
         a , b = b , a 
@@ -58,7 +56,6 @@ def leer_fraccion():
     frac = [n,d]
     return simplificar_fraccion(frac)
     
-
 def menu():
     print('a. Sumar dos fracciones')
     print('b. Restar dos fracciones')
