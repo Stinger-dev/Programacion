@@ -1,32 +1,31 @@
 	package test;
 	
 	import java.util.Scanner;
+	import java.util.ArrayList;
+	import java.util.List;
+
 	
 	public class Principal {
 		
 		public static void main(String[] args)
-		
 		{	
-			
 			
 			Scanner sc = new Scanner (System.in);
 			
-			System.out.print("Introduce algo: ");
-			String cadena =  sc.nextLine();
 			
-			System.out.println("hola a todos"+ cadena);
-			
-			
-			cadena =  sc.nextLine();
-	
-			System.out.println("hola a todos"+ cadena);	
-			
-			
-			for (int i=0;i<10;i++)
+			int edad = Integer.valueOf(sc.nextLine());
+			 
+			if(90 > edad && edad > 18)
 			{
-				System.out.println(i);
+				System.out.println("Es mayor de edad");
 			}
-			
+			else if (edad > 90) {
+				System.out.println("tas viejo ");
+			}
+			else
+			{
+				System.out.println("Que asco de lenguaje");
+			}
 		}
 	}
 		
