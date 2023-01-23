@@ -77,4 +77,5 @@ public class Boletin_completo {
 		}
 		return resultado;
 	}
+	
 }
