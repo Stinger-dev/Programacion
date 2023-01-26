@@ -4,11 +4,12 @@ public class Boletin_completo {
 
 	public static void main(String[] args) {
 
-		System.out.println(toBinary(111));
-
+		System.out.println(gcd(1220, 516));
+		System.out.println(minimoComunMultiplo(24, 36));
 	}
 
 	public static int numeroSolucionesEcuacionSegundoGrad(float a, float b, float c) {
+		// he calculado el numero de soluciones reales
 		int resultado = -1;
 		float d = b * b - 4 * a * c;
 		if (d > 0) {
@@ -119,6 +120,7 @@ public class Boletin_completo {
 		return resultado;
 	}
 
+//8---
 	public static String toBinary(int a) {
 
 		String resultado1 = "", resultadoF = "";
@@ -131,4 +133,42 @@ public class Boletin_completo {
 		}
 		return resultadoF;
 	}
+
+//9---
+	public static int toDecimal(String a) {
+
+		String resultado = "";
+		int resultadoF = 0;
+
+		for (int i = a.length() - 1; i >= 0; i--) {
+			resultado += a.charAt(i);
+		}
+
+		for (int i = 0; i < resultado.length(); i++) {
+			if (resultado.charAt(i) == '1') {
+				resultadoF += Math.pow(2, i);
+			}
+		}
+
+		return resultadoF;
+	}
+
+//10---
+	public static int gcd(int a, int b) {
+
+		int tmp = 0;
+
+		while (b > 0) {
+			tmp = a % b;
+			a = b;
+			b = tmp;
+		}
+		return a;
+	}
+//11---
+
+	public static int minimoComunMultiplo(int a, int b) {
+		return ((a * b) / gcd(a, b));
+	}
+
 }
