@@ -128,6 +128,7 @@ public class Boletin_completo {
 			resultado1 += (a % 2);
 			a = ((a - (a % 2)) / 2);
 		}
+
 		for (int i = resultado1.length() - 1; i >= 0; i--) {
 			resultadoF += resultado1.charAt(i);
 		}

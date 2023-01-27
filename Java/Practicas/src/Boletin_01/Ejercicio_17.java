@@ -14,6 +14,7 @@ public class Ejercicio_17 {
 			System.out.println(ini[0]);
 			ini[0] = b;
 			ini[1] = c;
+
 		}
 	}
 }
