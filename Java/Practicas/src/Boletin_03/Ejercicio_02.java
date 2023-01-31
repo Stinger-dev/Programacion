@@ -7,6 +7,7 @@ public class Ejercicio_02 {
 		System.out.println(esDivisibleEntreTres(156));
 	
 	}
+	
 
 	public static boolean esDivisibleEntreTres(int a) {
 		boolean esDivi = false;
@@ -20,7 +21,6 @@ public class Ejercicio_02 {
 			esDivi = true;		
 			break;
 		}
-		
 		return esDivi;
 	}
 	public static int sumarDigitos(int a) {
