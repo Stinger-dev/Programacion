@@ -3,11 +3,14 @@ package Boletin_02;
 public class Boletin_completo {
 
 	public static void main(String[] args) {
-
-		System.out.println(gcd(1220, 516));
-		System.out.println(minimoComunMultiplo(24, 36));
+		/*
+		int[] h1 = { 20, 11, 20 }, h2 = { 20, 10, 20 };
+		System.out.println(segundosEntre(h1, h2));
+		*/
+		System.out.println(esFuerte("vxvzafd_1Avasdfvdfvf"));
 	}
 
+//1
 	public static int numeroSolucionesEcuacionSegundoGrad(float a, float b, float c) {
 		// he calculado el numero de soluciones reales
 		int resultado = -1;
@@ -20,6 +23,7 @@ public class Boletin_completo {
 		return resultado;
 	}
 
+//2
 	public static String numeroinverso(int a) {
 		String tmp = String.valueOf(a);
 		String resultado = "";
@@ -30,37 +34,34 @@ public class Boletin_completo {
 		return resultado;
 	}
 
+//3
 	public static boolean esFuerte(String contra) {
-		// (mas de 8, numeros, minusculas, mayusculas, simbolos)
-		int[] check = { 0, 0, 0, 0, 0 };
+		 			    //{ n > 8, nums , minus, mayus, simbs}
+		boolean[] check = { false, false, false, false, false};
 
 		if (contra.length() >= 8) {
-			check[0] = 1;
+			check[0] = true;
 			if (!contra.toUpperCase().equals(contra)) {
-				check[1] = 1;
+				check[1] = true;
 				if (!contra.toLowerCase().equals(contra)) {
-					check[2] = 1;
+					check[2] = true;
 					for (char i : contra.toCharArray()) {
 						switch (i) {
 						case '0', '1', '2', '3', '4', '5', '6', '7', '8', '9':
-							check[3]++;
+							check[3]= true;
 							break;
 						case '.', ',', '-', '_', '?', '¿', '¡', '!', '(', ')', '<', '>', '/', '+', '*', '[', ']':
-							check[4]++;
+							check[4] = true;
 						}
 					}
 				}
 			}
 		}
-		boolean flag = false;
-		int k = 0;
-		while (!flag && k < check.length) {
-			flag = (check[k] == 0 ? true : false);
-			k++;
-		}
-		return flag == true ? false : true;
+		
+		return check[0] && check[1] && check[2] && check[3] && check[4];
 	}
 
+//4
 	public static String invertirCadena(String palabra) {
 
 		String resultado = "";
@@ -85,15 +86,17 @@ public class Boletin_completo {
 		return resultado;
 	}
 
+//5
 	public static boolean esMultiplo(int a, int b) {
 		return (a % b == 0 ? true : false);
 	}
 
+//6
 	public static int horaMayor(int[] h1, int[] h2) {
 
 		int resultado = -1000;
 
-		if ((h1[0] > 0 && h1[0] < 24) && (h1[1] > 0 && h1[1] < 60) && (h1[2] > 0 && h1[2] < 60)) {
+		/*if ((h1[0] > 0 && h1[0] < 24) && (h1[1] > 0 && h1[1] < 60) && (h1[2] > 0 && h1[2] < 60)) {
 			if ((h2[0] > 0 && h2[0] < 24) && (h2[1] > 0 && h2[1] < 60) && (h2[2] > 0 && h2[2] < 60)) {
 
 				if (h1[0] > h2[0]) {
@@ -116,11 +119,40 @@ public class Boletin_completo {
 					}
 				}
 			}
+		}*/
+		if ((h1[0] > 0 && h1[0] < 24) && (h1[1] > 0 && h1[1] < 60) && (h1[2] > 0 && h1[2] < 60)) {
+			if ((h2[0] > 0 && h2[0] < 24) && (h2[1] > 0 && h2[1] < 60) && (h2[2] > 0 && h2[2] < 60)) {
+
+				resultado = ((h1[0] * 3600 + h1[1] * 60 + h1[2]) - (h2[0] * 3600 + h2[1] * 60 + h2[2]));
+			} 
+		}
+		if (resultado>0) {
+			resultado = 1;
+		}else if (resultado == 0) {
+			resultado = 0;
+		}else {
+			resultado = 2;
+		}
+		
+			
+		
+		return resultado;
+	}
+
+//7	
+	public static int segundosEntre(int[] h1, int[] h2) {
+
+		int resultado = -1000;
+
+		if ((h1[0] > 0 && h1[0] < 24) && (h1[1] > 0 && h1[1] < 60) && (h1[2] > 0 && h1[2] < 60)) {
+			if ((h2[0] > 0 && h2[0] < 24) && (h2[1] > 0 && h2[1] < 60) && (h2[2] > 0 && h2[2] < 60)) {
+				resultado = ((h1[0] * 3600 + h1[1] * 60 + h1[2]) - (h2[0] * 3600 + h2[1] * 60 + h2[2]));
+			}
 		}
 		return resultado;
 	}
 
-//8---
+//8
 	public static String toBinary(int a) {
 
 		String resultado1 = "", resultadoF = "";
@@ -135,7 +167,7 @@ public class Boletin_completo {
 		return resultadoF;
 	}
 
-//9---
+//9
 	public static int toDecimal(String a) {
 
 		String resultado = "";
@@ -154,7 +186,7 @@ public class Boletin_completo {
 		return resultadoF;
 	}
 
-//10---
+//10
 	public static int gcd(int a, int b) {
 
 		int tmp = 0;
@@ -166,10 +198,12 @@ public class Boletin_completo {
 		}
 		return a;
 	}
-//11---
 
+//11
 	public static int minimoComunMultiplo(int a, int b) {
 		return ((a * b) / gcd(a, b));
 	}
-
+	
+	
+	
 }
