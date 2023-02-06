@@ -16,9 +16,7 @@ public class paladin extends personale {
 	}
 
 	public float ataque() {
-
 		return this.dmg;
-
 	}
 
 	public void recibirDaño(int dmg) {
