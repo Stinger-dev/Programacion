@@ -52,7 +52,7 @@ public class Ejercicio_04 {
 		
 		boolean encontrada = false;
 		
-		while (k>=(k-j)&& !encontrada) {
+		while (k>=(k-j) && !encontrada) {
 			if (bus.charAt(j) == cadena.charAt(k)) {
 				k--;
 				j--;
