@@ -10,7 +10,6 @@ public class Ejercicio_02 {
 
 	public static boolean esDivisibleEntreTres(int a) {
 		boolean esDivi = false;
-		String numero = String.valueOf(a);
 		
 		while (a>10) {
 			a = sumarDigitos(a);

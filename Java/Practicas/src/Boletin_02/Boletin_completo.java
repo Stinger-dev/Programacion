@@ -3,11 +3,7 @@ package Boletin_02;
 public class Boletin_completo {
 
 	public static void main(String[] args) {
-		/*
-		int[] h1 = { 20, 11, 20 }, h2 = { 20, 10, 20 };
-		System.out.println(segundosEntre(h1, h2));
-		*/
-		System.out.println(esFuerte("vxvzafd_1Avasdfvdfvf"));
+
 	}
 
 //1

@@ -3,11 +3,11 @@ package Boletin_03;
 public class Ejercicio_01 {
 	
 	public static void main(String[] agrs) {	
-		System.out.println(parImpar("0123456789", false));
-		System.out.println(parImpar("0123456789", true));
+		parImpar("0123456789", false);
+		parImpar("0123456789", true);
 	}
 	//true es par false impar
-	public static String  parImpar(String a, boolean bandera) {
+	public static void  parImpar(String a, boolean bandera) {
 		
 		String resultado = "";
 		if (bandera) {
@@ -42,6 +42,6 @@ public class Ejercicio_01 {
 				j+=2; 	
 			 }while (j<a.length());
 		}
-		return resultado;
+		System.out.println(resultado); 
 	}
 }
