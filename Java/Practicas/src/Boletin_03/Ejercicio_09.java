@@ -7,7 +7,6 @@ public class Ejercicio_09 {
 		// En el propio nombre del metodo esta indicado el nombre del metodo
 		for (int i : contarPalaFraSaltos("Hola a todos. Encantado de conoceros.\n Buenos dias.")) {
 			System.out.println(i);
-			System.out.println("abcdefghijklmnñopqrstuvwxyz".toUpperCase());
 		}
 	}
 
