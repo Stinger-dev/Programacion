@@ -1,47 +1,47 @@
 package Boletin_03;
 
 public class Ejercicio_01 {
-	
-	public static void main(String[] agrs) {	
+
+	public static void main(String[] agrs) {
 		parImpar("0123456789", false);
 		parImpar("0123456789", true);
 	}
-	//true es par false impar
-	public static void  parImpar(String a, boolean bandera) {
-		
+
+	// true es par false impar
+	public static void parImpar(String a, boolean bandera) {
+
 		String resultado = "";
 		if (bandera) {
-			for (int i = 0; i<a.length(); i+=2) {
-				resultado +=a.charAt(i);
+			for (int i = 0; i < a.length(); i += 2) {
+				resultado += a.charAt(i);
 			}
-			int k  = 0;
+			int k = 0;
 			while (a.length() > k) {
-				resultado +=a.charAt(k);
-				k +=2;
-			}		
+				resultado += a.charAt(k);
+				k += 2;
+			}
 			int j = 0;
-			 do {
-				resultado +=a.charAt(j);
-				j+=2; 
-				
-			 }while (j<a.length());
-			
-			
-		}else {
-			for (int i = 1; i<a.length(); i+=2) {
-				resultado +=a.charAt(i);
+			do {
+				resultado += a.charAt(j);
+				j += 2;
+
+			} while (j < a.length());
+
+		} else {
+			for (int i = 1; i < a.length(); i += 2) {
+				resultado += a.charAt(i);
 			}
-			int k  = 1;
+			int k = 1;
 			while (a.length() > k) {
-				resultado +=a.charAt(k);
-				k +=2;
+				resultado += a.charAt(k);
+				k += 2;
 			}
 			int j = 1;
-			 do {
-				resultado +=a.charAt(j);
-				j+=2; 	
-			 }while (j<a.length());
+			do {
+				resultado += a.charAt(j);
+				j += 2;
+			} while (j < a.length());
 		}
-		System.out.println(resultado); 
+		System.out.println(resultado);
 	}
 }
