@@ -3,17 +3,29 @@ package EsteSi;
 public class main {
 
 	public static void main(String[] args) {
-		paladin ob1 = new paladin("fran", 200);
+		String prueba = "todos todostodostodostodos todos";
+		
+		
+		System.out.println(contar1(prueba, "todos"));
+		
+		
+	}
+	
+	public static int contar1(String palabra, String busca) {
+		int resultado = 0, k = 0;
+		
+		while (palabra.indexOf(busca,k)!= -1)  {
+			k = palabra.indexOf(busca,k) + 1 ;
+			resultado++;
+		}		
+		return resultado;
+	}
+	public static int contar2(String palabra, String busca) {
+		int resultado = 0, k = 0;
+		StringBuilder cadena_ = new StringBuilder();
+		
 
-		System.out.println(ob1.getVida());
-
-		System.out.println(ob1.isVivo());
-
-		mago ob2 = new mago("f", 200);
-		ob1.recibirDaño(300);
-		System.out.println(ob1.getVida());
-
-		System.out.println(ob1.isVivo());
+		return resultado;
 
 	}
 
