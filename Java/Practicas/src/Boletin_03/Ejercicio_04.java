@@ -31,7 +31,7 @@ public class Ejercicio_04 {
 			int k = 0, j = i;
 			boolean encontrada = false;
 
-			while (k < bus.length() && !encontrada) {
+			while (k < bus.length() && !encontrada) { // encontrada letra distinta
 				if (bus.charAt(k) == cadena.charAt(j)) {
 					k++;
 					j++;

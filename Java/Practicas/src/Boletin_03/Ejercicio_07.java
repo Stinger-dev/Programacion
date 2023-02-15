@@ -10,13 +10,13 @@ public class Ejercicio_07 {
 	public static boolean estaEn(String cadena, String bus) {
 		int k = 0;
 		if (cadena != null && !cadena.isEmpty() && bus != null && !bus.isEmpty()) {
-			
+
 			for (int i = 0; i < cadena.length() && k < bus.length(); i++) {
 				if (cadena.charAt(i) == bus.charAt(k)) {
 					k++;
 				}
 			}
 		}
-		return bus!=null  && k == bus.length() && !bus.isEmpty() ;
+		return bus != null && k == bus.length() && !bus.isEmpty();
 	}
 }
