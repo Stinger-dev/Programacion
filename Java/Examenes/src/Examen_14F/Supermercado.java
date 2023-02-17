@@ -1,4 +1,4 @@
-package Examen14F;
+package Examen_14F;
 
 import java.util.Scanner;
 
@@ -94,4 +94,5 @@ public class Supermercado {
 			}
 		}
 	}
+
 }

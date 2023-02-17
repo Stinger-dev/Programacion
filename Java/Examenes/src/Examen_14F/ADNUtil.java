@@ -1,6 +1,7 @@
-package Examen14F;
+package Examen_14F;
 
 public class ADNUtil {
+
 	public static String VALIDOS = "ATGC";
 	public static String VALIDOS_COMPRIMIDO = "ATGC12345678901";
 
@@ -12,7 +13,8 @@ public class ADNUtil {
 	}
 
 	public static int obstenerNumeroPalabras(String cadena) {
-		//La cantidad de veces que sale TAA o ATT en la cadena, y si no termina por eso, cuenta una palabra mas
+		// La cantidad de veces que sale TAA o ATT en la cadena, y si no termina por
+		// eso, cuenta una palabra mas
 		int resultado = 0, k = 0;
 		cadena = cadena.toUpperCase();
 		if (validarAdn(cadena, false)) {
@@ -80,51 +82,43 @@ public class ADNUtil {
 		return cadena_.toString().toUpperCase();
 
 	}
-	/* Se sale de rango en la ultima posicion, no me ha dado tiempo a teminarlo
+	/*
+	 * Se sale de rango en la ultima posicion, no me ha dado tiempo a teminarlo
 	 * 
-
-	public static String descomprimeADN2(String cadena) {
-		StringBuilder cadena_ = new StringBuilder(cadena);
-
-		if (validarAdn(cadena, true)) {
-			int posicion = 0;
-
-			for (int i = 0; i < cadena_.length() - 1; i++) {
-
-				if (Character.isDigit(cadena_.charAt(i + 1))) {
-					posicion = i + 1;
-					while (posicion < cadena_.length() - 1 && Character.isDigit(cadena_.charAt(posicion))) {
-						posicion++;
-					}
-					int cantidad = Integer.valueOf(cadena_.substring(i + 1, posicion));
-					cadena_.delete(i + 1, posicion);
-					for (int k = 0; k < cantidad - 1; k++) {
-						cadena_.insert(i, cadena_.charAt(i));
-					}
-				}
-			}
-
-		} else {
-			cadena_.replace(0, cadena.length(), " Cadena no valida");
-		}
-
-		return cadena_.toString().toUpperCase();
-
-	}
-	*/
+	 * 
+	 * public static String descomprimeADN2(String cadena) { StringBuilder cadena_ =
+	 * new StringBuilder(cadena);
+	 * 
+	 * if (validarAdn(cadena, true)) { int posicion = 0;
+	 * 
+	 * for (int i = 0; i < cadena_.length() - 1; i++) {
+	 * 
+	 * if (Character.isDigit(cadena_.charAt(i + 1))) { posicion = i + 1; while
+	 * (posicion < cadena_.length() - 1 &&
+	 * Character.isDigit(cadena_.charAt(posicion))) { posicion++; } int cantidad =
+	 * Integer.valueOf(cadena_.substring(i + 1, posicion)); cadena_.delete(i + 1,
+	 * posicion); for (int k = 0; k < cantidad - 1; k++) { cadena_.insert(i,
+	 * cadena_.charAt(i)); } } }
+	 * 
+	 * } else { cadena_.replace(0, cadena.length(), " Cadena no valida"); }
+	 * 
+	 * return cadena_.toString().toUpperCase();
+	 * 
+	 * }
+	 */
 
 	public static String comprimeADN(String cadena) {
 		StringBuilder resultado = new StringBuilder();
 		cadena = cadena.toUpperCase();
 
 		if (validarAdn(cadena, false)) {
-			
+
 			int k = 0;
-			while (k<cadena.length()) {
+			while (k < cadena.length()) {
 				int j = 0;
-				
+
 				resultado.append(cadena.charAt(k));
-				while (k<cadena.length() && cadena.charAt(k) == resultado.charAt(resultado.length()-1)) {
+				while (k < cadena.length() && cadena.charAt(k) == resultado.charAt(resultado.length() - 1)) {
 					k++;
 					j++;
 				}

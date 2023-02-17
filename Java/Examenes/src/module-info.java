@@ -5,5 +5,5 @@
  * @author gonza
  *
  */
-module Examen14F {
+module Examenes {
 }
