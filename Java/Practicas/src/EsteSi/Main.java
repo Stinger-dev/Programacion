@@ -1,6 +1,6 @@
 package EsteSi;
 
-public class main {
+public class Main {
 
 	public static void main(String[] args) {
 		String prueba = "todos todostodostodostodos todos";
