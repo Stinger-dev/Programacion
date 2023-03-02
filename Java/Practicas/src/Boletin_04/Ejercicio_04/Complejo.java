@@ -28,18 +28,6 @@ public class Complejo {
 		return new Complejo(this.parteReal, -this.parteImaginaria);
 	}
 	
-	@Override
-	public String toString() {
-		return String.format("(%s,%si)",parteReal, parteImaginaria);
-	}
-	public boolean equals(Object ob1) {
-		boolean igual = this == ob1;
-		if (!igual && ob1 != null && ob1 instanceof Complejo) {
-			Complejo ob2 = (Complejo)ob1;
-			igual = this.parteImaginaria != ob2.parteImaginaria && this.parteReal != ob2.parteReal;
-		}			
-		return igual;
-	}
 	
 	
 	/**
@@ -59,4 +47,16 @@ public class Complejo {
 		return ob3;
 	}
 	
+	@Override
+	public String toString() {
+		return String.format("(%s,%si)",parteReal, parteImaginaria);
+	}
+	public boolean equals(Object ob1) {
+		boolean igual = this == ob1;
+		if (!igual && ob1 != null && ob1 instanceof Complejo) {
+			Complejo ob2 = (Complejo)ob1;
+			igual = this.parteImaginaria != ob2.parteImaginaria && this.parteReal != ob2.parteReal;
+		}			
+		return igual;
+	}
 }
