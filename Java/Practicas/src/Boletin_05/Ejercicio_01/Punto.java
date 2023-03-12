@@ -35,6 +35,8 @@ public class Punto {
 	@Override
 	public String toString() {
 		return "(" + x + "," + y + ")";
+		
+		
 	}
 	public boolean equals(Object ob1) {
 		boolean igual = this == ob1;

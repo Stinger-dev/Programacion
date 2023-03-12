@@ -1,5 +1,7 @@
 package Boletin_05.Ejercicio_04;
 
+import java.util.Objects;
+
 public class Partido {
 	private int jornada;
 	private String quiniela;
@@ -55,9 +57,7 @@ public class Partido {
 		if (!this.equipoLocal.equalsIgnoreCase("error")) {
 			return String.format("Partido entre equipo local %s y el equipo visitante %s ha finalizado con %s goles del equipo local y %s del equipo visitante. Resultado de la quiniela %s", 
 					this.equipoLocal, this.equipoVisitante, this.golesLocal, this.golesVisitante, this.quiniela);
-		}
-		
-		
+		}		
 		return String.format("Partido entre equipo local %s y el equipo visitante %s aun no se ha jugado", 
 				this.equipoLocal, this.equipoVisitante);
 	}
@@ -66,63 +66,6 @@ public class Partido {
 	
 	
 
-/*
-	public int getJornada() {
-		return jornada;
-	}
-
-
-	
-
-
-	public String getQuiniela() {
-		return quiniela;
-	}
-
-
-	public void setQuiniela(String quiniela) {
-		this.quiniela = quiniela;
-	}
-
-
-	public String getEquipoLocal() {
-		return equipoLocal;
-	}
-
-
-
-
-	public int getGolesLocal() {
-		return golesLocal;
-	}
-
-
-	public void setGolesLocal(int golesLocal) {
-		this.golesLocal = golesLocal;
-	}
-
-
-	public String getEquipoVisitante() {
-		return equipoVisitante;
-	}
-
-
-
-
-	public int getGolesVisitante() {
-		return golesVisitante;
-	}
-
-
-	public void setGolesVisitante(int golesVisitante) {
-		this.golesVisitante = golesVisitante;
-	}
-	
-	
-	
-	
-	
-	*/
 	
 	
 }
