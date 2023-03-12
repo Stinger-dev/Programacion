@@ -1,9 +1,8 @@
 package Boletin_06.Ejercicio_08;
 
-import java.util.Arrays;
 
 public class Refranes {
-	private Refran[] refranes = new Refran[5];
+	private Refran[] refranes = new Refran[50];
 	private int contador;
 
 	public Refranes() {
@@ -32,13 +31,28 @@ public class Refranes {
 	@Override
 	public String toString() {
 		StringBuilder resultado = new StringBuilder("");
-		for (Refran ob: refranes) {
-			resultado.append(ob.toString());
+		
+		for (int i = 0; i < this.contador; i++) {
+			resultado.append(this.refranes[i].toString());
 			resultado.append("\n");
 		}
 		return resultado.toString();
 	}
 	
+	
+	
+	public int buscarPorPalabra(String palabra) {
+		int k = -1;
+		for (int i = 0; i < this.refranes.length && k == -1; i++) {
+			 if (this.refranes[i].estaPalabra(palabra)){
+				 k = i;
+			 }
+		 }
+		return k;
+	}
+	public Refran getRefranParticular(int k) {
+		return this.refranes[k];
+	}
 	
 	
 	

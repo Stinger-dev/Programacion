@@ -1,6 +1,5 @@
 package Boletin_06.Ejercicio_07;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
