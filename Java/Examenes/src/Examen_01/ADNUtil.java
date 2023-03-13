@@ -1,4 +1,4 @@
-package Examen_14F;
+package Examen_01;
 
 public class ADNUtil {
 
@@ -62,7 +62,6 @@ public class ADNUtil {
 		StringBuilder cadena_ = new StringBuilder(cadena);
 
 		if (validarAdn(cadena, true)) {
-			int posicion = 0;
 
 			for (int i = 0; i < cadena_.length() - 1; i++) {
 
