@@ -14,8 +14,6 @@ public class Main {
 		
 		menu(ob1);
 		
-		
-
 	}
 	public static void menu(Refranes refranes) {
 		Scanner teclado = new Scanner(System.in);
