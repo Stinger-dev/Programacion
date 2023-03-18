@@ -43,7 +43,7 @@ public class Avion {
 	}
 
 	public float getMediaKm() {
-		return numVuelos>0?kmVolados / numVuelos: 0;
+		return numVuelos > 0 ? kmVolados / numVuelos : 0;
 	}
 
 	public String getIdAvion() {
@@ -70,9 +70,9 @@ public class Avion {
 
 	@Override
 	public String toString() {
-		return String.format("Avión con id: %s de la compañía %s ha realizado  %s vuelos, con un total de %s km y una media de %s km por vuelo.\n",
+		return String.format(
+				"Avión con id: %s de la compañía %s ha realizado  %s vuelos, con un total de %s km y una media de %s km por vuelo.\n",
 				idAvion, compannia, numVuelos, kmVolados, getMediaKm());
 	}
-	
 
 }
