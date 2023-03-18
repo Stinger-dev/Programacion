@@ -1,5 +1,6 @@
 package Boletin_07.Ejercicio_00;
 
+<<<<<<< HEAD
 import java.time.LocalDate;
 import java.util.Scanner;
 
@@ -62,5 +63,8 @@ public class Main {
 			cambiarNacion(ob1);
 		}
 	}
+=======
+public class Main {
+>>>>>>> develop
 
 }

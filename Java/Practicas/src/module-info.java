@@ -6,4 +6,5 @@
  *
  */
 module Practicas {
+	requires org.junit.jupiter.api;
 }

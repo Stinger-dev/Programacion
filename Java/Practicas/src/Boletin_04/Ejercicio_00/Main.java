@@ -39,7 +39,7 @@ public class Main {
 	}
 
 	public static void menu(Avion ob1) {
-		
+
 		System.out.println("a) Asignar Vuelo\n" + "b) Obtener Numero Vuelos\n" + "c) Obtener el numero de km\n"
 				+ "d) Media de km por vuelos\n" + "e) Cambiar compañia \n" + "f) Mostrar info avion\n" + "g) Salir\n");
 		String op = teclado.nextLine().toUpperCase();
@@ -60,7 +60,7 @@ public class Main {
 			System.out.println(ob1.getNumeroVuelos());
 			menu(ob1);
 			break;
- 
+
 		case "C":
 			System.out.println(ob1.getKmVolados());
 

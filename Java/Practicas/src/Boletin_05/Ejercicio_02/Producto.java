@@ -5,20 +5,17 @@ public class Producto {
 	private String descripcion;
 	private double precioSinIva;
 	private static double iva = 0.20;
-	
+
 	public Producto(String descripcion, double precioSinIva) {
 		super();
 		this.codigo = hashCode();
 		this.descripcion = descripcion;
 		this.precioSinIva = precioSinIva;
 	}
-	
-	
+
 	public double getValorFinal() {
-		return this.precioSinIva*(1+iva);
+		return this.precioSinIva * (1 + iva);
 	}
-	
-	
 
 	public int getCodigo() {
 		return codigo;
@@ -51,6 +48,5 @@ public class Producto {
 	public static void setIva(double iva) {
 		Producto.iva = iva;
 	}
-	
-	
+
 }

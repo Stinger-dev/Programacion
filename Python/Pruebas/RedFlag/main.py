@@ -1,6 +1,5 @@
-import game
+import RedFlag.game
 
-numero = 5
+nJugadores = input("Indique el numero de jugadores: ")
 
-game (numero)
-input("hola")
+game.game(nJugadores)

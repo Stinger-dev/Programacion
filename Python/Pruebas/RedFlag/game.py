@@ -40,3 +40,9 @@ def game(nJugadores):
     else:
         
         print(" Not enought players, at least 3 players, 2 makers and 1 who choose the winnern\n")
+        
+        
+nJugadores = int( input("Indique el numero de jugadores: "))
+
+game(nJugadores)
+   

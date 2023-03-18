@@ -6,11 +6,10 @@ public class Main {
 		System.out.println(ob1.getValorFinal());
 		Producto ob2 = new Producto("algo to wapo", 20);
 		System.out.println(ob2.getValorFinal());
-		
+
 		Producto.setIva(0.1);
 		System.out.println(ob1.getValorFinal());
 		System.out.println(ob2.getValorFinal());
 
 	}
 }
-	

@@ -9,8 +9,5 @@ public class Main {
 
 		System.out.println(ob1.equals(ob2));
 
-		
-		
-		
 	}
 }
