@@ -1,4 +1,4 @@
-package Boletin_07.Ejercicio_02;
+package Boletin_07.Ejercicio_05;
 
 public interface Backend {
 	static final double WEB_API_DB_COST = 2200;

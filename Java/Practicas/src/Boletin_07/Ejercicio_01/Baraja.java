@@ -7,7 +7,7 @@ public class Baraja {
 
 	private int numCartas;
 	private int siguiente;// Esto es para coger la siguiente de la baraja y realmente es el puntero actual
-	private Carta[] cartas;
+	private Carta[] cartas; 
 	private final int NUMERO_CARTAS = 40;
 
 	public Baraja() {
@@ -16,6 +16,10 @@ public class Baraja {
 		this.siguiente = 0;
 		this.cartas = new Carta[numCartas];
 		generarBaraja();
+		this.barajarA();
+		this.barajarB();
+		this.barajarC();
+		this.barajarD();// ahi bien barajaó tó 
 	}
 
 	private void generarBaraja() {
@@ -37,7 +41,7 @@ public class Baraja {
 	 * Metodo intercambio de dos posiciones aleatorias
 	 */
 	public void barajarA() {
-		int permutaciones = 200;
+		int permutaciones = 100;
 		Random r = new Random();
 
 		for (int i = 0; i < permutaciones; i++) {

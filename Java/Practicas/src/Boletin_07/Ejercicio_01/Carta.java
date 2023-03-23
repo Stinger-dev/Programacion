@@ -41,7 +41,7 @@ public class Carta {
 
 	@Override
 	public String toString() {
-		return "La carta es un " + number + " de " + palo;
+		return number + " de " + palo;
 	}
 
 }

@@ -1,4 +1,4 @@
-package Boletin_07.Ejercicio_02;
+package Boletin_07.Ejercicio_05;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
