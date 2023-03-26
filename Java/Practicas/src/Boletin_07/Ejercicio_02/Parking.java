@@ -1,15 +1,30 @@
 package Boletin_07.Ejercicio_02;
 
+import java.time.LocalDateTime;
+import java.util.Arrays;
+
+import Boletin_07.Ejercicio_02.Comparadores.CompararFecha;
+import Boletin_07.Ejercicio_02.Comparadores.CompararMarcaModelo;
+import Boletin_07.Ejercicio_02.Comparadores.CompararMatricula;
+import Boletin_07.Ejercicio_02.Comparadores.CompararTipoyCombustible;
+import Boletin_07.Ejercicio_02.Enumerates.Combustibles;
+import Boletin_07.Ejercicio_02.Enumerates.TipoVehiculo;
+import Boletin_07.Ejercicio_02.Excepciones.ErrorAlBuscarVehiculo;
 
 public class Parking {
 	private Vehiculo[] vehiculos = new Vehiculo[50];
-	
-	
-	
+
 	
 	public Parking() {
 		super();
-		
+		resetParking();
+	}
+	private void resetParking() {
+		for (int i = 0 ; i< vehiculos.length; i++)
+			try {
+				this.vehiculos[i] = new Vehiculo("Marca", "Modelo", "9999zzzz", Combustibles.electrico, LocalDateTime.of(0, 0, 0, 0, 0), TipoVehiculo.automovil);
+			} catch (Exception e) {
+			}
 	}
 	
 	
@@ -26,91 +41,52 @@ public class Parking {
 		}
 		return resultado;
 	}
-	
-	
-
-	public Vehiculo[] ordenarPorFecha() {
-		Vehiculo[] tmp_array = this.vehiculos;
-		Vehiculo tmp;
-		
-		for (int i = 0; i< tmp_array.length; i++) {
-			for (int j = i; j < tmp_array.length; j++) {	
-				if (tmp_array[j]!= null && tmp_array[i].getEntrada().compareTo(tmp_array[j].getEntrada()) > 0 ) {
-					tmp = tmp_array[j];
-					tmp_array[j] = tmp_array[i];
-					tmp_array[i] = tmp;
-				} 
-			}
-		}
-		this.vehiculos = tmp_array;
-		return tmp_array;
+	 public void ordenarPorFecha() {
+		Arrays.sort(this.vehiculos, new CompararFecha());
 	}
-	
-	public Vehiculo[] ordenarPorMatricula() {
-		Vehiculo[] tmp_array = this.vehiculos;
-		Vehiculo tmp;
-		
-		for (int i = 0; i< tmp_array.length; i++) {
-			for (int j = i; j < tmp_array.length; j++) {	
-				if (tmp_array[j]!= null && tmp_array[i].getMatricula().compareTo(tmp_array[j].getMatricula()) > 0 ) {
-					tmp = tmp_array[j];
-					tmp_array[j] = tmp_array[i];
-					tmp_array[i] = tmp;
-				} 
-			}
-		}
-		this.vehiculos = tmp_array;
-		return tmp_array;
+
+	public void ordenarPorMatricula() {
+		Arrays.sort(this.vehiculos, new CompararMatricula());
 	}
 	public void ordenarPorMarcaModelo() {
-		Vehiculo[] tmp_array = this.vehiculos;
-		Vehiculo tmp;
-		
-		for (int i = 0; i< tmp_array.length; i++) {
-			for (int j = i; j < tmp_array.length; j++) {	
-				if (tmp_array[j]!= null && tmp_array[i].compareMarcaModelo(tmp_array[j]) > 0 ) {
-					tmp = tmp_array[j];
-					tmp_array[j] = tmp_array[i];
-					tmp_array[i] = tmp;
-				} 
-			}
-		}
-		this.vehiculos = tmp_array;
+		Arrays.sort(this.vehiculos, new CompararMarcaModelo());
 	}
-	
 	
 	public void ordenarPorTipoCombustible() {
-		Vehiculo[] tmp_array = this.vehiculos;
-		Vehiculo tmp;
-		
-		for (int i = 0; i< tmp_array.length; i++) {
-			for (int j = i; j < tmp_array.length; j++) {	
-				if (tmp_array[j]!= null && tmp_array[i].compareTipoCombustible(tmp_array[j]) > 0 ) {
-					tmp = tmp_array[j];
-					tmp_array[j] = tmp_array[i];
-					tmp_array[i] = tmp;
-				} 
-			}
-		}
-		this.vehiculos = tmp_array;
+		Arrays.sort(this.vehiculos, new CompararTipoyCombustible());
 	}
 	
+	public void salirCoche(Vehiculo v) throws ErrorAlBuscarVehiculo {
+		boolean encontrado = false;
+		int k;
+		for (k = 0; k< this.vehiculos.length && !encontrado; k++) {
+			encontrado = this.vehiculos[k].equals(v) ;
+		}
+		if (encontrado) {
+			this.vehiculos[k-1] = null;
+		}else {
+			throw new ErrorAlBuscarVehiculo();
+		}
+	}
 	
+	public Vehiculo[] getVehiculos() {
+		return vehiculos;
+	}
 
 	@Override
 	public String toString() {
 		StringBuilder resultado = new StringBuilder();
-		for (Vehiculo v : vehiculos) {
-			
-			resultado.append((v != null)? "| " + v.toString()+ " |" : "| plaza vacia |");
+		
+		
+		for (int i = 0; i < this.vehiculos.length; i++) {
+			resultado.append((this.vehiculos[i] != null)? "| " + this.vehiculos[i].toString()+ " |" : "| plaza vacia |");
+			if (i%3 == 0)
+				resultado.append("\n");
 		}
 		return resultado.toString();
 	}
 
 
-	public Vehiculo[] getVehiculos() {
-		return vehiculos;
-	}
 	
 	
 	

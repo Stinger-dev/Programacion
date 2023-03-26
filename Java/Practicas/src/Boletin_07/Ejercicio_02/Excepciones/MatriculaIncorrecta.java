@@ -1,4 +1,4 @@
-package Boletin_07.Ejercicio_02;
+package Boletin_07.Ejercicio_02.Excepciones;
 
 public class MatriculaIncorrecta extends Exception {
 

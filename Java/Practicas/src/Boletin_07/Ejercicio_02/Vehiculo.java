@@ -2,7 +2,11 @@ package Boletin_07.Ejercicio_02;
 
 import java.time.LocalDateTime;
 
-public class Vehiculo{
+import Boletin_07.Ejercicio_02.Enumerates.Combustibles;
+import Boletin_07.Ejercicio_02.Enumerates.TipoVehiculo;
+import Boletin_07.Ejercicio_02.Excepciones.MatriculaIncorrecta;
+
+public class Vehiculo implements Comparable<Vehiculo>{
 
 	private String marca;
 	private String modelo;
@@ -61,17 +65,34 @@ public class Vehiculo{
 		return tipoVehiculo;
 	}
 
-	@Override
-	public String toString() {
-		return "marca=" + marca + ", modelo=" + modelo + ", matricula=" + matricula +"  tipo: " +tipoVehiculo+", combustible="
-				+ combustible + ", entrada=" + entrada;
-	}
-
 	
 	public int compareMarcaModelo(Vehiculo v) {
 		return (this.marca.compareTo(v.getMarca()) == 0)? this.modelo.compareTo(v.getModelo()) : this.marca.compareTo(v.getMarca()) ;		
 	} 
 	public int compareTipoCombustible(Vehiculo v) {
 		return (this.tipoVehiculo.compareTo(v.getTipoVehiculo()) == 0)? this.combustible.compareTo(v.getCombustible()) : this.tipoVehiculo.compareTo(v.getTipoVehiculo()) ;		
+	}
+
+	@Override
+	public int compareTo(Vehiculo obj) {		
+		return this.entrada.compareTo(obj.entrada);
+	}
+	
+	@Override
+	public String toString() {
+		return "matricula: " + matricula;
+	}
+	
+	
+	
+	@Override
+	public boolean equals(Object obj) {
+		boolean esIgual = this == obj;
+		if (!esIgual && obj != null && obj instanceof Vehiculo) {
+			Vehiculo casteado = (Vehiculo) obj;
+
+			esIgual = this.matricula.equals(casteado.matricula);
+		}
+		return esIgual;
 	}
 }
