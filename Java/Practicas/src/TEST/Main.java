@@ -9,13 +9,8 @@ public class Main {
 	public static int[] test = new int[] {2,1, 7,4,5,3, 0, 0, 0};
 
 	public static void main(String[] args) {
-
-		ordenarArray();
-		
-		
-		for (int n :test) {
-			System.out.println(n);
-		}
+		Persona ob = new Persona("a");
+		System.out.println(ob.getClass().getSimpleName());
 	}
 
 	
