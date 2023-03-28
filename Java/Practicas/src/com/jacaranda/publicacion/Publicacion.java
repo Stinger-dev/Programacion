@@ -16,17 +16,20 @@ public abstract  class Publicacion implements Comparable<Publicacion>, Valorable
 	
 	
 	
-	public Publicacion(String texto, Usuario usuario) {
-		this.codigo = codigoSiguiente++; //Recordar esto para la prox vez que lo necesite, "bastante util"
-		this.texto = texto;	
-		this.usuario = usuario;
+	public Publicacion(String texto, Usuario usuario) throws PublicacionException {
+			setTexto(texto);
+			this.usuario = usuario;
+			this.codigo = codigoSiguiente++; //Recordar esto para la prox vez que lo necesite, "bastante util"
+			this.fechaCreacion = LocalDateTime.now(); //Fecha de creacion de la publicacion
+		
+		
 	}
 	
 	protected String getTexto() {
 		return this.texto;
 	}
 	
-	protected abstract void setTexto(String texto);
+	protected abstract void setTexto(String texto) throws PublicacionException;
 
 	@Override
 	public int hashCode() {
@@ -52,9 +55,17 @@ public abstract  class Publicacion implements Comparable<Publicacion>, Valorable
 		return valoracion;
 	}
 	
-	public boolean valorar() {
-		//ToDo No se bien que se pide aqui
-		return false;
+	public boolean valorar(String valoracion) {
+		boolean success = false;
+		
+		try {
+			int tmp = Valoraciones.valueOf(valoracion.toUpperCase()).getValoracion();
+			this.valoracion+=tmp;
+			success = true;
+		} catch (Exception e) {
+		}
+
+		return success; //Supongo que es una bandera de exito, pq en el uml lo pone pero no he encontrado aun el 
 	}
 
 	public int getCodigo() {

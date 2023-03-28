@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import com.jacaranda.publicacion.Valoraciones;
 import com.jacaranda.usuario.Usuario;
 
 class TestsUnitario {
@@ -29,7 +30,15 @@ class TestsUnitario {
 		assertEquals(true, ob1.setPass("123", "1234"));
 		assertEquals(true, ob1.checkPass("1234"));
 
+	}
 	
+	@Test
+	void testValoraciones() {
+		
+		assertEquals(3, Valoraciones.valueOf("superbuena".toUpperCase()).getValoracion());
+		assertEquals(1, Valoraciones.valueOf("buena".toUpperCase()).getValoracion());
+		assertEquals(-2, Valoraciones.valueOf("muymala".toUpperCase()).getValoracion());
+
 	}
 	
 }
