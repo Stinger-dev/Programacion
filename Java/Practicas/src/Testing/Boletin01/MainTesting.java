@@ -11,14 +11,14 @@ public class MainTesting {
 		CadenaUtils ob1 = new CadenaUtils("buenas");
 		assertEquals("BUENAS", ob1.toMayusculas() );
 		
-		CadenaUtils ob4 = new CadenaUtils("BUENAS");
-		assertEquals("BUENAS", ob4.toMayusculas());
+		ob1 = new CadenaUtils("BUENAS");
+		assertEquals("BUENAS", ob1.toMayusculas());
 		
-		CadenaUtils ob2 = new CadenaUtils(null);
-		assertEquals(null, ob2.toMayusculas() );
+		ob1 = new CadenaUtils(null);
+		assertEquals(null, ob1.toMayusculas() );
 		
-		CadenaUtils ob3 = new CadenaUtils("");
-		assertEquals("", ob3.toMayusculas() );
+		ob1 = new CadenaUtils("");
+		assertEquals("", ob1.toMayusculas() );
 	}
 	
 	@Test
@@ -26,75 +26,124 @@ public class MainTesting {
 		CadenaUtils ob1 = new CadenaUtils("BUENAS");
 		assertEquals("buenas", ob1.toMinusculas() );
 		
-		CadenaUtils ob4 = new CadenaUtils("buenas");
-		assertEquals("buenas", ob4.toMinusculas());
+		ob1 = new CadenaUtils("buenas");
+		assertEquals("buenas", ob1.toMinusculas());
 		
-		CadenaUtils ob2 = new CadenaUtils(null);
-		assertEquals(null, ob2.toMinusculas() );
+		ob1 = new CadenaUtils(null);
+		assertEquals(null, ob1.toMinusculas() );
 		
-		CadenaUtils ob3 = new CadenaUtils("");
-		assertEquals("", ob3.toMinusculas() );
+		ob1 = new CadenaUtils("");
+		assertEquals("", ob1.toMinusculas() );
 	}
 	@Test
 	void testEstaEnMayusculas() {
 		CadenaUtils ob1 = new CadenaUtils("BUENAS");
 		assertEquals(true, ob1.estaEnMayusculas() );
 		
-		CadenaUtils ob4 = new CadenaUtils("buenas");
-		assertEquals(false, ob4.estaEnMayusculas());
+		ob1 = new CadenaUtils("buenas");
+		assertEquals(false, ob1.estaEnMayusculas());
 		
-		CadenaUtils ob2 = new CadenaUtils(null);
-		assertEquals(false, ob2.estaEnMayusculas());
+		 ob1 = new CadenaUtils(null);
+		assertEquals(false, ob1.estaEnMayusculas());
 		
-		CadenaUtils ob3 = new CadenaUtils("");
-		assertEquals(false, ob3.estaEnMayusculas() );
+		 ob1 = new CadenaUtils("");
+		assertEquals(false, ob1.estaEnMayusculas() );
 	}
 	@Test
 	void testEstaEnMinusculas() {
 		CadenaUtils ob1 = new CadenaUtils("BUENAS");
 		assertEquals(false, ob1.estaEnMinisculas() );
 		
-		CadenaUtils ob4 = new CadenaUtils("buenas");
-		assertEquals(true, ob4.estaEnMinisculas());
+		ob1 = new CadenaUtils("buenas");
+		assertEquals(true, ob1.estaEnMinisculas());
 		
-		CadenaUtils ob2 = new CadenaUtils(null);
-		assertEquals(false, ob2.estaEnMinisculas());
+		ob1 = new CadenaUtils(null);
+		assertEquals(false, ob1.estaEnMinisculas());
 		
-		CadenaUtils ob3 = new CadenaUtils("");
-		assertEquals(false, ob3.estaEnMinisculas() );
+		ob1 = new CadenaUtils("");
+		assertEquals(false, ob1.estaEnMinisculas() );
 	}
 
 	@Test
 	void testEsCapicua() {
-		CadenaUtils ob1 = new CadenaUtils("1221");
+		CadenaUtils ob1 = new CadenaUtils("12121");
 		assertEquals(true, ob1.esCapicua() );
 		
-		CadenaUtils ob2 = new CadenaUtils("1261");
-		assertEquals(false, ob2.esCapicua() );
+		ob1 = new CadenaUtils("1261");
+		assertEquals(false, ob1.esCapicua() );
 		
-		CadenaUtils ob3 = new CadenaUtils("");
-		assertEquals(false, ob3.esCapicua() );
+		ob1 = new CadenaUtils("");
+		assertEquals(false, ob1.esCapicua() );
 		
-		CadenaUtils ob4 = new CadenaUtils(null);
-		assertEquals(false, ob4.esCapicua() );
+		ob1 = new CadenaUtils(null);
+		assertEquals(false, ob1.esCapicua() );
 	}
 	
 	@Test
 	void testEsPalindromo() {
 		CadenaUtils ob1 = new CadenaUtils("abc");
+		assertEquals(false, ob1.esPalindromo() );
+		
+		 ob1 = new CadenaUtils("abec");
+		assertEquals(false, ob1.esPalindromo() );
+		
+		ob1 = new CadenaUtils("");
+		assertEquals(false, ob1.esPalindromo() );
+		
+		ob1 = new CadenaUtils(null);
+		assertEquals(false, ob1.esPalindromo() );
+		
+		ob1 = new CadenaUtils("aba");
 		assertEquals(true, ob1.esPalindromo() );
 		
-		CadenaUtils ob2 = new CadenaUtils("abec");
-		assertEquals(false, ob2.esPalindromo() );
+		ob1 = new CadenaUtils("abba");
+		assertEquals(true, ob1.esPalindromo() );
 		
-		CadenaUtils ob3 = new CadenaUtils("");
-		assertEquals(false, ob3.esPalindromo() );
-		
-		CadenaUtils ob4 = new CadenaUtils(null);
-		assertEquals(false, ob4.esPalindromo() );
+		ob1 = new CadenaUtils("111");
+		assertEquals(false, ob1.esPalindromo() );
 	}
 	
+	@Test
+	void testEsDecimal() {
+		CadenaUtils ob1 = new CadenaUtils("123.2");
+		assertEquals(true, ob1.esDecimal() );
+		
+		ob1 = new CadenaUtils("12");
+		assertEquals(false, ob1.esDecimal());
+		
+		ob1 = new CadenaUtils("12.0");
+		assertEquals(false, ob1.esDecimal());
+		
+		ob1 = new CadenaUtils("12.19273486");
+		assertEquals(true, ob1.esDecimal());
+		
+		ob1 = new CadenaUtils(null);
+		assertEquals(false, ob1.esDecimal());
+		
+		ob1 = new CadenaUtils("");
+		assertEquals(false, ob1.esDecimal() );
+	}
 	
+	@Test
+	void testEsEntero() {
+		CadenaUtils ob1 = new CadenaUtils("123.2");
+		assertEquals(false, ob1.esEntero() );
+		
+		ob1 = new CadenaUtils("12");
+		assertEquals(true, ob1.esEntero());
+		
+		ob1 = new CadenaUtils("12.0");
+		assertEquals(true, ob1.esEntero());
+		
+		ob1 = new CadenaUtils("12.19273486");
+		assertEquals(false, ob1.esEntero());
+		
+		ob1 = new CadenaUtils(null);
+		assertEquals(false, ob1.esEntero());
+		
+		ob1 = new CadenaUtils("");
+		assertEquals(false, ob1.esEntero() );
+	}
 	
 	
 }

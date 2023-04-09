@@ -81,9 +81,35 @@ public class CadenaUtils {
 				resultado = !encontrado;
 			}
 		}
-		
-		return resultado;
-		
+		return resultado;	
 	}
+	
+	public boolean esDecimal() {
+		boolean resultado = false;
+		if (this.cadena != null && !this.cadena.isEmpty()) {
+			Double tmp,tmp2;
+			try {
+				tmp = Double.valueOf(this.cadena);
+				tmp2 = Double.valueOf(tmp.intValue());
+				resultado = !tmp.equals(Double.valueOf(tmp2));		
+			} catch (Exception e) {
+			}
+		}
+		return resultado;
+	}
+	
+	public boolean esEntero() {
+		boolean resultado = false;
+		if (this.cadena != null && !this.cadena.isEmpty()) {
+			Double tmp,tmp2;
+			try {
+				tmp = Double.valueOf(this.cadena);
+				tmp2 = Double.valueOf(tmp.intValue());
+				resultado = tmp.equals(Double.valueOf(tmp2));		
+			} catch (Exception e) {
+			}
+		}
+		return resultado;
+	}	
 	
 }
