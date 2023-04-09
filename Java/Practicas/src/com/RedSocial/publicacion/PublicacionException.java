@@ -21,6 +21,5 @@ public class PublicacionException extends Exception {
 			boolean writableStackTrace) {
 		super(message, cause, enableSuppression, writableStackTrace);
 	}
-	
 
 }

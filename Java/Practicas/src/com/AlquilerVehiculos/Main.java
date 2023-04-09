@@ -9,12 +9,10 @@ public class Main {
 	public static void main(String[] args) {
 		menu();
 	}
-	
+
 	public static void menu() {
-		System.out.println("1. Alta de vehiculo. \n"
-				+ "2. Calculo de precio de alquiler. \n"
-				+ "3. Salir.");
-		
+		System.out.println("1. Alta de vehiculo. \n" + "2. Calculo de precio de alquiler. \n" + "3. Salir.");
+
 		switch (teclado.nextLine()) {
 		case "1":
 			altaVehiculo();
@@ -30,15 +28,13 @@ public class Main {
 				} catch (Exception e) {
 					System.out.println("Valor no valido, debe ser mayor que 0.");
 				}
-			} while (dias<1);
+			} while (dias < 1);
 			System.out.println("Indique la matricula del coche que desea alquilar:");
 			String matricula = teclado.nextLine();
-			
+
 			double precio = principal.getPrecio(matricula, dias);
-			System.out.println((precio != -1)? precio : "El vehiculo no existe" );
-			
-			
-			
+			System.out.println((precio != -1) ? precio : "El vehiculo no existe");
+
 			menu();
 			break;
 
@@ -51,13 +47,11 @@ public class Main {
 			break;
 		}
 	}
-	
-	
-	
+
 	public static void altaVehiculo() {
 		System.out.println("Indique la matricula del vehiculo");
 		String matricula = teclado.nextLine();
-		if(!principal.existeVehiculo(matricula)) {
+		if (!principal.existeVehiculo(matricula)) {
 			Gama gama = null;
 			do {
 				System.out.println("Indique la gama del vehiculo:");
@@ -67,7 +61,7 @@ public class Main {
 					System.out.println("Gama incorrecta");
 				}
 			} while (gama == null);
-			
+
 			Tipo tipo = null;
 			do {
 				System.out.println("Indique el tipo del vehiculo:");
@@ -76,9 +70,9 @@ public class Main {
 				} catch (Exception e) {
 					System.out.println("Tipo incorrecto");
 				}
-				
+
 			} while (tipo == null);
-			
+
 			switch (tipo) {
 			case COCHE:
 				altaCoche(matricula, gama, tipo);
@@ -91,13 +85,12 @@ public class Main {
 				altaFurgoneta(matricula, gama, tipo);
 				break;
 			}
-			
-		}else {
+
+		} else {
 			System.out.println("El vehiculo ya esta guardado");
 		}
 	}
-	
-	
+
 	public static void altaCoche(String matricula, Gama gama, Tipo tipos) {
 		CombustibleCoche combustible = null;
 		do {
@@ -111,9 +104,9 @@ public class Main {
 
 		principal.addCoche(gama, tipos, matricula, combustible);
 	}
-	
+
 	public static void altaFurgoneta(String matricula, Gama gama, Tipo tipos) {
-		double PMA= 0.0;
+		double PMA = 0.0;
 		do {
 			System.out.println("Indique el PMA de la furgoneta:");
 			try {
@@ -125,7 +118,7 @@ public class Main {
 
 		principal.addFurgonetaDeCarga(gama, tipos, matricula, PMA);
 	}
-	
+
 	public static void altaMicrobus(String matricula, Gama gama, Tipo tipos) {
 		int plazas = 0;
 		do {
@@ -139,7 +132,5 @@ public class Main {
 
 		principal.addMicroBus(gama, tipos, matricula, plazas);
 	}
-	
-	
-	
+
 }

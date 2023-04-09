@@ -11,8 +11,7 @@ import com.RedSocial.usuario.Usuario;
 public class Main {
 
 	public static void main(String[] args) {
-		
-		
+
 		MemoryStorage ms = new MemoryStorage();
 		try {
 			ms.addUsuario("gon", "123");
@@ -24,27 +23,29 @@ public class Main {
 		} catch (MemoryStorageExeption e) {
 			System.out.println("Funciona");
 		}
-		
+
 		try {
-			ms.addPublicacion("Este mensaje va a desaparecer",  "gon");
+			ms.addPublicacion("Este mensaje va a desaparecer", "gon");
 		} catch (MemoryStorageExeption e) {
-			System.out.println("Problema :(");		
-			
+			System.out.println("Problema :(");
+
 		}
 		try {
-			ms.addPublicacion("este deberia llenar casi todo",  "gon","furbo");
+			ms.addPublicacion("este deberia llenar casi todo", "gon", "furbo");
 		} catch (MemoryStorageExeption e) {
 
-			System.out.println("Problema :(");		
-		}		
-		
-		try {
-			ms.addPublicacion("Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean ma",  "gon",3);
-		} catch (MemoryStorageExeption e) {
-
-			System.out.println("Problema :(");		
+			System.out.println("Problema :(");
 		}
-		
+
+		try {
+			ms.addPublicacion(
+					"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean ma",
+					"gon", 3);
+		} catch (MemoryStorageExeption e) {
+
+			System.out.println("Problema :(");
+		}
+
 		System.out.println(ms.MostrarListaPublicaciones());
 	}
 

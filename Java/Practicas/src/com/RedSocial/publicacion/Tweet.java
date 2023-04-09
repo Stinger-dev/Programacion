@@ -10,38 +10,34 @@ public class Tweet extends Publicacion {
 
 	@Override
 	protected void setTexto(String texto) throws PublicacionException {
-		if (texto != null && texto.length()<50) {
+		if (texto != null && texto.length() < 50) {
 			this.texto = texto;
-		}else
+		} else
 			throw new PublicacionException("Longitud de tweet incorrecta");
-		
+
 	}
-	
+
 	public boolean valorar(String valoracion) {
 		boolean success = false;
-		
+
 		try {
 			int tmp = Valoraciones.valueOf(valoracion.toUpperCase()).getValoracion();
-			this.valoracion+=tmp*2;
+			this.valoracion += tmp * 2;
 			success = true;
 		} catch (Exception e) {
 		}
 
-		return success; 
+		return success;
 	}
 
 	@Override
 	public String toString() {
-		/**FORMATO REQUERIDO 
-		 * 	Tweet.
-			Publicación: <texto de la publicación>
-			Realizada por: <login del usuario>
-			Valoración: <valoración>
-			Fecha de publicación: <fecha de publicación>
-			Número de estrellas: <número de estrellas>
-
+		/**
+		 * FORMATO REQUERIDO Tweet. Publicación: <texto de la publicación> Realizada
+		 * por: <login del usuario> Valoración: <valoración> Fecha de publicación:
+		 * <fecha de publicación> Número de estrellas: <número de estrellas>
+		 * 
 		 */
-		return String.format("%s \n"
-						   + "%s \n", this.getClass().getSimpleName(), super.toString());
+		return String.format("%s \n" + "%s \n", this.getClass().getSimpleName(), super.toString());
 	}
 }

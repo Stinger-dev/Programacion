@@ -7,7 +7,8 @@ public class ADNUtil_Ampliacion {
 
 	public static void main(String[] args) {
 
-		System.out.println(contarPalabra("CGTTAGTCGTACGTTGCATGCTAGCGTTCTAGCTAGCTACGTTGCTAGCCGTT", "CGTT")); // he añadido 5
+		System.out.println(contarPalabra("CGTTAGTCGTACGTTGCATGCTAGCGTTCTAGCTAGCTACGTTGCTAGCCGTT", "CGTT")); // he
+																											// añadido 5
 
 		System.out.println(descomprimeADN("A3G2T1C3"));
 

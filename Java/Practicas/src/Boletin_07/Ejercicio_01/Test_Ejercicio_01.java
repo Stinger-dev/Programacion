@@ -10,7 +10,7 @@ class Test_Ejercicio_01 {
 	void test() {
 		assertEquals(Palos.bastos, Palos.valueOf("bastos"));
 		assertEquals(Palos.bastos, Palos.valueOf("bastos"));
-		
+
 	}
 
 	void testCarta() {

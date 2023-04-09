@@ -2,8 +2,6 @@ package com.AlquilerVehiculos;
 
 public class Coche extends Vehiculo {
 	private CombustibleCoche combustible;
-	
-	
 
 	public Coche(Gama gama, Tipo tipo, String matricula, CombustibleCoche combustible) {
 		super(gama, tipo, matricula);

@@ -3,7 +3,7 @@ package com.AlquilerVehiculos;
 public class MicroBus extends Vehiculo {
 
 	private int numeroPlazas;
-	
+
 	public MicroBus(Gama gama, Tipo tipo, String matricula, int numeroPlazas) {
 		super(gama, tipo, matricula);
 		this.numeroPlazas = numeroPlazas;
@@ -11,7 +11,7 @@ public class MicroBus extends Vehiculo {
 
 	@Override
 	public double getPrecioDia() {
-		return 5*numeroPlazas+this.gama.getBase();
+		return 5 * numeroPlazas + this.gama.getBase();
 	}
 
 }

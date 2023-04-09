@@ -12,7 +12,7 @@ public class CompararDefaultNotas implements Comparator<Nota> {
 			resultado = ob1.getFechaCreacion().compareTo(ob2.getFechaCreacion());
 		} else if (ob1 == null) {
 			resultado = 1;
-		
+
 		} else if (ob2 == null) {
 			resultado = -1;
 		}
