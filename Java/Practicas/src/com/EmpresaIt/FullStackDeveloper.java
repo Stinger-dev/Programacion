@@ -1,35 +1,18 @@
 package com.EmpresaIt;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
 public class FullStackDeveloper extends Candidate implements Frontend, Backend {
 
 	@Override
-	public double createWebAPIAndDBConnectionCost() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public double maintenanceCost() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public double computeWebDesingCost() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public double computeFEMaintenanceCost() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
 	public double computeGrossSalary() {
-		// TODO Auto-generated method stub
-		return 0;
+		double totalMultiplicador = this.getCt().getMultiplicador()
+				+ (int) ChronoUnit.YEARS.between(this.getStartDate(), LocalDate.now()) * plusAntiguedad;
+
+		return (this.funcion) ? totalMultiplicador * (computeWebDesingCost() + createWebAPIAndDBConnectionCost() )
+				: totalMultiplicador * (computeFEMaintenanceCost() + maintenanceCost());
+		//sinceramente, si no lo hago asi, ni idea de como estructurar esto
 	}
 
 }

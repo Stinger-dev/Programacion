@@ -1,27 +1,21 @@
 package com.EmpresaIt;
 
-public class WebDesigner extends Candidate implements Frontend {
-	
-	public WebDesigner() {
-	super();
-	}
-	
-	@Override
-	public double computeWebDesingCost() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
-	@Override
-	public double computeFEMaintenanceCost() {
-		// TODO Auto-generated method stub
-		return 0;
+public class WebDesigner extends Candidate implements Frontend {
+
+	public WebDesigner() {
+		super();
 	}
 
 	@Override
 	public double computeGrossSalary() {
-		// TODO Auto-generated method stub
-		return 0;
+		double totalMultiplicador = this.getCt().getMultiplicador()
+				+ (int) ChronoUnit.YEARS.between(this.getStartDate(), LocalDate.now()) * plusAntiguedad;
+
+		return (this.funcion) ? totalMultiplicador * computeWebDesingCost()
+				: totalMultiplicador * computeFEMaintenanceCost();
 	}
 
 }

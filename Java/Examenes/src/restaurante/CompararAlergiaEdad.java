@@ -11,7 +11,7 @@ public class CompararAlergiaEdad implements Comparator<Cliente> {
 		int resultado = 0;
 
 		if (ob1 != null && ob2 != null) {
-			resultado = (ob1.getAlergia().compareTo(ob2.getAlergia()) == 0) ? ob1.getEdadActual()-ob2.getEdadActual()
+			resultado = (ob1.getAlergia().compareTo(ob2.getAlergia()) == 0) ? ob1.getEdadActual() - ob2.getEdadActual()
 					: ob1.getAlergia().compareTo(ob2.getAlergia());
 		} else if (ob1 == null) {
 			resultado = 1;

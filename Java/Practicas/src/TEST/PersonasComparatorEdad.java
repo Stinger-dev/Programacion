@@ -11,7 +11,6 @@ public class PersonasComparatorEdad implements Comparator<Persona> {
 		if (ob1 != null && ob2 != null) {
 			resultado = Integer.compare(ob2.getEdad(), ob1.getEdad());
 
-
 		} else if (ob1 == null) {
 			resultado = 1;
 		} else if (ob2 == null) {

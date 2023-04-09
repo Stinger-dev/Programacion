@@ -1,6 +1,6 @@
 package com.AlquilerVehiculos;
 
- public abstract class Vehiculo {
+public abstract class Vehiculo {
 
 	protected Gama gama;
 	protected Tipo tipo;
