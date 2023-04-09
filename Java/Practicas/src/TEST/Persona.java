@@ -2,14 +2,14 @@ package TEST;
 
 public class Persona {
 
-	private String a;
+	private Integer edad;
 
-	public Persona(String a) {
+	public Persona(int edad) {
 		super();
-		this.a = a;
+		this.edad = edad;
 	}
 
-	public void name() {
-		System.out.println(this.getClass());
+	public int getEdad() {
+		return edad;
 	}
 }

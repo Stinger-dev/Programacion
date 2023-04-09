@@ -1,4 +1,4 @@
-package Boletin_07.Ejercicio_05;
+package com.EmpresaIt;
 
 public enum ContractType {
 	FULLTIME, PARTIAL;

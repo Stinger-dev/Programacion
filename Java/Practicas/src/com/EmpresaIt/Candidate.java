@@ -1,9 +1,9 @@
-package Boletin_07.Ejercicio_05;
+package com.EmpresaIt;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-public class Candidate {
+public abstract class Candidate {
 	private LocalDate dateOfBirth;
 	private LocalDateTime startDate;
 	private String dni;
@@ -12,17 +12,11 @@ public class Candidate {
 	private ContractType ct;
 	private boolean inProject;
 
-	public Candidate(LocalDate dateOfBirth, LocalDateTime startDate, String dni, String name, String surname,
-			ContractType ct, boolean inProject) {
+	public Candidate() {
 		super();
-		this.dateOfBirth = dateOfBirth;
-		this.startDate = startDate;
-		this.dni = dni;
-		this.name = name;
-		this.surname = surname;
-		this.ct = ct;
-		this.inProject = inProject;
 	}
+	
+	public abstract double computeGrossSalary();
 
 	public LocalDate getDateOfBirth() {
 		return dateOfBirth;
