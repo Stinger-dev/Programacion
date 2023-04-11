@@ -6,7 +6,6 @@ import com.BlocDeNotas.notas.Nota;
 public class Main {
 
 	public static void main(String[] args) {
-		Nota nota = new Nota("aoskdjf");
 		/*
 		 * System.out.println(nota.toString()); System.out.println(nota.isEmpty());
 		 * System.out.println(nota.compareTo(nota));

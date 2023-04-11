@@ -3,7 +3,7 @@ package com.AlquilerVehiculos;
 public class Alquileres {
 
 	private Vehiculo[] coches;
-	private final int NUMERO_MAX_COCHES = 200;
+	private static final int NUMERO_MAX_COCHES = 200;
 
 	public Alquileres() {
 		this.coches = new Vehiculo[NUMERO_MAX_COCHES];

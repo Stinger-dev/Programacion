@@ -1,5 +1,7 @@
 package Boletin_05.Ejercicio_01;
 
+import java.util.Objects;
+
 public class Linea {
 
 	private Punto a;
@@ -40,6 +42,11 @@ public class Linea {
 	@Override
 	public String toString() {
 		return "[" + a.toString() + " , " + b.toString() + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(a, b);
 	}
 
 	public boolean equals(Object ob1) {

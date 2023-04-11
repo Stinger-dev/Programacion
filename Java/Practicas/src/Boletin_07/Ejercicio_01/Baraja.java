@@ -5,6 +5,7 @@ import java.util.Random;
 
 public class Baraja {
 
+	private static Random r = new Random();
 	private int numCartas;
 	private int siguiente;// Esto es para coger la siguiente de la baraja y realmente es el puntero actual
 	private Carta[] cartas;
@@ -42,7 +43,6 @@ public class Baraja {
 	 */
 	public void barajarA() {
 		int permutaciones = 100;
-		Random r = new Random();
 
 		for (int i = 0; i < permutaciones; i++) {
 			intercambioCarta(r.nextInt(0, this.cartas.length), r.nextInt(0, this.cartas.length));
@@ -54,7 +54,6 @@ public class Baraja {
 	 * Metodo intercambio de cada posicion
 	 */
 	public void barajarB() {
-		Random r = new Random();
 
 		for (int i = 0; i < this.cartas.length; i++) {
 			intercambioCarta(i, r.nextInt(0, this.cartas.length));
@@ -75,7 +74,6 @@ public class Baraja {
 	public void barajarC() {
 		Carta[] tmp = new Carta[this.cartas.length];
 		int contador = 0;
-		Random r = new Random();
 
 		while (this.cartas.length > 0) {
 			int n = r.nextInt(0, this.cartas.length);
@@ -96,7 +94,6 @@ public class Baraja {
 	 * Metodo de fuerza bruta
 	 */
 	public void barajarD() {
-		Random r = new Random();
 		Carta[] tmp = new Carta[this.cartas.length];
 
 		for (int i = 0; i < tmp.length; i++) {

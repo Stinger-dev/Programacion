@@ -12,7 +12,7 @@ public class BackendProgrammer extends Candidate implements Backend {
 	@Override
 	public double computeGrossSalary() {
 		double totalMultiplicador = this.getCt().getMultiplicador()
-				+ (int) ChronoUnit.YEARS.between(this.getStartDate(), LocalDate.now()) * plusAntiguedad;
+				+ (int) ChronoUnit.YEARS.between(this.getStartDate(), LocalDate.now()) * PLUS_ANTIGUEDAD;
 		return (this.funcion) ? totalMultiplicador * createWebAPIAndDBConnectionCost()
 				: totalMultiplicador * maintenanceCost();
 	}

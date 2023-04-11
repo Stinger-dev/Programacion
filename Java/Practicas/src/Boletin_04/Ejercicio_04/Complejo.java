@@ -1,5 +1,7 @@
 package Boletin_04.Ejercicio_04;
 
+import java.util.Objects;
+
 public class Complejo {
 
 	private double parteReal;
@@ -52,6 +54,11 @@ public class Complejo {
 		return String.format("(%s,%si)", parteReal, parteImaginaria);
 	}
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(parteImaginaria, parteReal);
+	}
+
 	public boolean equals(Object ob1) {
 		boolean igual = this == ob1;
 		if (!igual && ob1 != null && ob1 instanceof Complejo) {
@@ -60,4 +67,5 @@ public class Complejo {
 		}
 		return igual;
 	}
+
 }

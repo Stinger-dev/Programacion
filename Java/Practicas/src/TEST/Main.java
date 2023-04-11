@@ -1,25 +1,30 @@
 package TEST;
 
-import java.time.LocalDateTime;
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
 	public static void main(String[] args) {
 
-		Persona[] personas = new Persona[20];
-		for (int i = 0; i < personas.length; i++) {
-			personas[i] = new Persona(i);
+		double ratioEnS = 0.166*25;
+		double resultadoEnS = 15000000/ratioEnS;
+		double minutos = resultadoEnS/60;
+		double horas = minutos/60;
+		double dias = horas/24;
+		double conAbono = dias/2;
+		
+		System.out.println(conAbono);
 
-		}
-		LocalDateTime tmp1 = LocalDateTime.parse("2007-12-03T10:15:30");
 
-		Arrays.sort(personas, new PersonasComparatorEdad());
-
-		for (Persona perso : personas) {
-			System.out.println(perso.getEdad());
-		}
-
+		
+		
 	}
+	
+	
+		
+		
+
+	
 
 }

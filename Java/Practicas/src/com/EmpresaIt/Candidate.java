@@ -11,7 +11,7 @@ public abstract class Candidate {
 	private String surname;
 	private ContractType ct;
 	private boolean inProject;
-	public static final double plusAntiguedad = 0.05;
+	public static final double PLUS_ANTIGUEDAD = 0.05;
 	public boolean funcion; // False = Mantenimiento ; True = Desarrollo
 
 	public Candidate() {
@@ -23,7 +23,7 @@ public abstract class Candidate {
 	public void setFuncion(boolean funcion) {
 		this.funcion = funcion;
 	}
-	
+
 	public LocalDate getDateOfBirth() {
 		return dateOfBirth;
 	}
@@ -82,7 +82,9 @@ public abstract class Candidate {
 
 	@Override
 	public String toString() {
-		return String.format("Nombre: %s \n" + "Apellido: %s\n" + "Contrato: %s\n" + "Fecha de incorporacion: %s\n" + "Salario: %s \n",
+		return String.format(
+				"Nombre: %s \n" + "Apellido: %s\n" + "Contrato: %s\n" + "Fecha de incorporacion: %s\n"
+						+ "Salario: %s \n",
 				this.name, this.surname, this.ct, this.startDate, this.computeGrossSalary());
 	}
 

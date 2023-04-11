@@ -26,7 +26,7 @@ public class CadenaUtils {
 	public boolean estaEnMayusculas() {
 		boolean resultado = false;
 		if (this.cadena != null && !this.cadena.isEmpty()) {
-			resultado = this.cadena == this.cadena.toUpperCase();
+			resultado = this.cadena.equals(this.cadena.toUpperCase());
 		}
 		return resultado;
 	}
@@ -34,7 +34,7 @@ public class CadenaUtils {
 	public boolean estaEnMinisculas() {
 		boolean resultado = false;
 		if (this.cadena != null && !this.cadena.isEmpty()) {
-			resultado = this.cadena == this.cadena.toLowerCase();
+			resultado = this.cadena.equals(this.cadena.toLowerCase());
 		}
 		return resultado;
 	}

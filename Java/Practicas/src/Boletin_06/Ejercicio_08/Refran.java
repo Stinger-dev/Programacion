@@ -1,5 +1,7 @@
 package Boletin_06.Ejercicio_08;
 
+import java.util.Objects;
+
 public class Refran {
 	private String refran;
 
@@ -10,6 +12,11 @@ public class Refran {
 
 	public String getRefran() {
 		return this.refran;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(refran);
 	}
 
 	@Override

@@ -61,7 +61,7 @@ public class Avion {
 	public boolean cambiarCompannia(String cadena) {
 		boolean hecho = false;
 
-		if (!cadena.isEmpty() && cadena != null) {
+		if (cadena != null && !cadena.isEmpty()) {
 			this.compannia = cadena;
 			hecho = true;
 		}

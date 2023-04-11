@@ -1,6 +1,7 @@
 package Boletin_07.Ejercicio_02;
 
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 import Boletin_07.Ejercicio_02.Enumerates.Combustibles;
 import Boletin_07.Ejercicio_02.Enumerates.TipoVehiculo;
@@ -83,6 +84,11 @@ public class Vehiculo implements Comparable<Vehiculo> {
 	@Override
 	public String toString() {
 		return "matricula: " + matricula;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(matricula);
 	}
 
 	@Override

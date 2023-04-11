@@ -1,5 +1,7 @@
 package Boletin_05.Ejercicio_01;
 
+import java.util.Objects;
+
 public class Punto {
 	private double x;
 	private double y;
@@ -35,6 +37,12 @@ public class Punto {
 
 	}
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(x, y);
+	}
+
+	@Override
 	public boolean equals(Object ob1) {
 		boolean igual = this == ob1;
 		if (!igual && ob1 != null && ob1 instanceof Punto) {
