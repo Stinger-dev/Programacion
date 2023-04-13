@@ -2,10 +2,10 @@ package Boletin_08.Ejercicio_04;
 
 import java.time.LocalDateTime;
 
-public class Visitas {
+public class PaginaWeb {
 	private String url;
 	private LocalDateTime timeStamp;
-	public Visitas(String url) {
+	public PaginaWeb(String url) {
 		this.url = url;
 		this.timeStamp = LocalDateTime.now();
 	}
@@ -20,6 +20,6 @@ public class Visitas {
 	@Override
 	public String toString() {
 		
-		return String.format("%s :: %s", this.timeStamp, this.url);
+		return String.format("%s -> %s", this.timeStamp, this.url);
 	}
 }
