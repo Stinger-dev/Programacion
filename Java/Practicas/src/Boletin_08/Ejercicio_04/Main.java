@@ -11,6 +11,7 @@ public class Main {
 		menu(ob1);
 
 	}
+	
 	public static void menu(Historial histo) {
 		System.out.println(	"""
 							1. Nueva página consultada

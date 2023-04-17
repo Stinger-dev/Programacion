@@ -47,7 +47,7 @@ public class Punto {
 		boolean igual = this == ob1;
 		if (!igual && ob1 != null && ob1 instanceof Punto) {
 			Punto ob2 = (Punto) ob1;
-			igual = this.x != ob2.x && this.y != ob2.y;
+			igual = Math.abs(x - y) > 0.0000001;
 		}
 		return igual;
 	}

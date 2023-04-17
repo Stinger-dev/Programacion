@@ -9,7 +9,7 @@ public class Baraja {
 	private int numCartas;
 	private int siguiente;// Esto es para coger la siguiente de la baraja y realmente es el puntero actual
 	private Carta[] cartas;
-	private final int NUMERO_CARTAS = 40;
+	private static final int NUMERO_CARTAS = 40;
 
 	public Baraja() {
 		super();

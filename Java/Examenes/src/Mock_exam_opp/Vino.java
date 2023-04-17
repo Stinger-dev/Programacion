@@ -1,5 +1,7 @@
 package Mock_exam_opp;
 
+import java.util.Objects;
+
 public class Vino {
 
 	private String nombre;
@@ -37,16 +39,19 @@ public class Vino {
 	}
 
 	@Override
+	public int hashCode() {
+		return Objects.hash(graduacion, nombre);
+	}
+
+	@Override
 	public boolean equals(Object ob1) {
 		boolean igual = this == ob1;
 		if (!igual && ob1 != null && ob1 instanceof Vino) {
 			Vino ob2 = (Vino) ob1;
 
 			igual = this.graduacion == ob2.graduacion && this.nombre.equalsIgnoreCase(ob2.nombre);
-
 		}
 		return igual;
-
 	}
 
 }

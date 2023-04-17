@@ -8,23 +8,23 @@ class Test_Ejercicio_01 {
 
 	@Test
 	void test() {
-		assertEquals(Palos.bastos, Palos.valueOf("bastos"));
-		assertEquals(Palos.bastos, Palos.valueOf("bastos"));
+		assertEquals(Palos.BASTOS, Palos.valueOf("bastos"));
+		assertEquals(Palos.BASTOS, Palos.valueOf("bastos"));
 
 	}
 
 	void testCarta() {
-		Carta ob1 = new Carta(1, Palos.bastos);
+		Carta ob1 = new Carta(1, Palos.BASTOS);
 		assertEquals(1, ob1.getNumber());
-		assertEquals(Palos.bastos, ob1.getPalo());
+		assertEquals(Palos.BASTOS, ob1.getPalo());
 		assertEquals(1, ob1.getValor());
 
 	}
 
 	void testCarta2() {
-		Carta ob1 = new Carta(10, Palos.bastos);
+		Carta ob1 = new Carta(10, Palos.BASTOS);
 		assertEquals(1, ob1.getNumber());
-		assertEquals(Palos.bastos, ob1.getPalo());
+		assertEquals(Palos.BASTOS, ob1.getPalo());
 		assertEquals(0.5, ob1.getValor());
 
 	}

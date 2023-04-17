@@ -5,7 +5,8 @@ import java.util.Arrays;
 public class Ejercicio_01 {
 
 	public static void main(String[] args) {
-		String numeros[] = new String[20] ;
+		String[] numeros = new String[20] ;
+
 		
 		for (int i = 0; i < numeros.length; i++) {
 			numeros[i] = String.valueOf(i);

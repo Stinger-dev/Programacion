@@ -15,7 +15,7 @@ public class Plato {
 	}
 
 	public Plato(String nombre) {
-		this();
+		this();	
 		this.nombre = nombre;
 
 	}
@@ -77,7 +77,7 @@ public class Plato {
 		if (!igual && ob1 != null && ob1 instanceof Plato) {
 			Plato ob2 = (Plato) ob1;
 
-			igual = this.nombre == ob2.nombre;
+			igual = this.nombre.equals(ob2.nombre);
 		}
 		return igual;
 	}

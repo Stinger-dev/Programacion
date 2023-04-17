@@ -14,6 +14,9 @@ public class Historial {
 		this.registro  = new ArrayList<>();
 	}
 
+	public String getNombreUsuario() {
+		return nombreUsuario;
+	}
 	public void newPaginaVisitada(String url) {
 		this.registro.add(new PaginaWeb(url));
 	}
@@ -44,20 +47,10 @@ public class Historial {
 		for (int i = 0; i< this.registro.size(); i++) {
 			if(this.registro.get(i).getUrl().equals(url)) {
 				this.registro.remove(i);
+				i--;
 			}
 		}
-		/*
-		 * Teoria de pq no funciona, al hacer un forEach no se puede modificar pq si no seria un cacao?
-		 * 
-		List<Visita> tmp0 = new ArrayList<>();
-		for (Visita tmp : this.registro) {
-			if(tmp.getUrl().equals(url)) {
-				tmp0.add(tmp);
-			}
-		}
-		
-		this.registro.removeAll(tmp0);
-		*/
+	
 		
 	}
 	
