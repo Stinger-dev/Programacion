@@ -7,16 +7,16 @@ public class Alumno {
 	private String nombre;
 	private String apellido;
 	private String dni;
-	
-	public Alumno(String nombre,String apellido, String dni) {
+
+	public Alumno(String nombre, String apellido, String dni) {
 		this.dni = dni;
 		this.nombre = nombre;
 		this.apellido = apellido;
 	}
-	
+
 	@Override
 	public String toString() {
-		return String.format("%s %s y dni %s", this.nombre,this.apellido, this.dni);
+		return String.format("%s %s y dni %s", this.nombre, this.apellido, this.dni);
 	}
 
 	@Override
@@ -34,6 +34,5 @@ public class Alumno {
 		}
 		return esIgual;
 	}
-	
-	
+
 }

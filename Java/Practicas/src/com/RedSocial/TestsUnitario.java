@@ -17,7 +17,6 @@ class TestsUnitario {
 		assertEquals(true, ob1.checkPass("123"));
 		assertEquals(false, ob1.checkPass(""));
 		assertEquals(false, ob1.checkPass(null));
-		
 
 		assertEquals(true, ob1.equals(ob1));
 		assertEquals(false, ob1.equals(ob2));

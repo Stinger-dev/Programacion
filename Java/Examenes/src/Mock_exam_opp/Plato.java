@@ -15,7 +15,7 @@ public class Plato {
 	}
 
 	public Plato(String nombre) {
-		this();	
+		this();
 		this.nombre = nombre;
 
 	}

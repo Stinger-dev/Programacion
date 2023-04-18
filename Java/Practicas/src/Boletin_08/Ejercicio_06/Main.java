@@ -13,6 +13,6 @@ public class Main {
 		dicc.addPalabra("gato", "miau");
 
 		System.out.println(dicc.buscarSignificadosPalabra("joseju"));
-		
+
 	}
 }

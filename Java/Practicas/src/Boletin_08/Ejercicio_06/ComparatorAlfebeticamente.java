@@ -9,7 +9,7 @@ public class ComparatorAlfebeticamente implements Comparator<Palabra> {
 		int resultado = 0;
 
 		if (ob1 != null && ob2 != null) {
-			resultado = ob1.getPalabra().compareTo(ob2.getPalabra()) ;
+			resultado = ob1.getPalabra().compareTo(ob2.getPalabra());
 		} else if (ob1 == null) {
 			resultado = 1;
 		} else {

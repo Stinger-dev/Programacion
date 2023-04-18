@@ -6,6 +6,5 @@ import java.util.List;
 public class Caja {
 
 	private boolean abierto;
-	
 
 }
