@@ -25,7 +25,7 @@ for n in range(1000000):
     fin = time.time()
     total += fin - inicio
     k+=1
-    print(n)
+
     
    
 print(total/k)

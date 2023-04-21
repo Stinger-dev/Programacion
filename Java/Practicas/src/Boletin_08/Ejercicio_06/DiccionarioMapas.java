@@ -2,31 +2,30 @@ package Boletin_08.Ejercicio_06;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class DiccionarioMapas {
-	HashMap<String, List<String>> palabras;
+	HashMap<String, Set<String>> palabras;
 
-	public DiccionarioMapas(String nombre) {
-		this.palabras = new HashMap<String, List<String>>();
+	public DiccionarioMapas() {
+		this.palabras = new HashMap<>();
 
 	}
 
 	public void addPalabra(String palabra, String significado) {
 		if (!this.palabras.containsKey(palabra)) {
-			List<String> tmp = new ArrayList<>();
-			tmp.add(significado);
-			this.palabras.put(significado, tmp);
-		} else {
+			this.palabras.put(significado, new HashSet<>());
+		} 
 			this.palabras.get(significado).add(significado);
-		}
 	}
 
 	public String getSignificadosPalabra(String palabra) {
 		StringBuilder resultado = new StringBuilder();
-		if (this.palabras.get(palabra) != null) {
+		if (palabra != null && this.palabras.containsKey(palabra)) {
 			for (String tmp : this.palabras.get(palabra)) {
-				resultado.append(tmp).append("\n");
+				resultado.append(tmp).append("%n");
 			}
 		} else {
 			resultado.append("No existe");

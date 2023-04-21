@@ -1,5 +1,6 @@
 package Mock_Exam_Bonoloto;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -16,9 +17,8 @@ public class Combinacion {
 	public Combinacion(int n1, int n2, int n3, int n4, int n5, int e1, int e2) throws CombinacionExeption {
 		/**
 		 * De n1 a n5 son los numeros y de e1 a e2 son las estrellas
-		 * 
 		 */
-		this( new int[] {n1, n2, n3, n4, n5}, new int[] {e1,e2});
+		this(new int[] {n1, n2, n3, n4, n5}, new int[] {e1,e2});
 		
 	}
 
@@ -30,6 +30,7 @@ public class Combinacion {
 	*/
 
 	public Combinacion(int[] numeros, int[] estrellas) throws CombinacionExeption {
+		
 		this.numeros = new HashSet<>();
 		this.estrellas = new HashSet<>();
 
@@ -46,6 +47,8 @@ public class Combinacion {
 		if (!this.validarEstrellas()) {
 			throw new CombinacionExeption("Valores de estrellas no validos");
 		}
+		
+		
 
 	}
 
@@ -83,9 +86,13 @@ public class Combinacion {
 	
 	public int comprobarCombinacion(Combinacion ob1) {
 		int resultado = 0;
-		//TODO ni idea que tiene que hacer esto, pq devuelve un numero?
+		if(ob1 != null) {
+			Set<Integer> numerostmp = new HashSet<>(this.numeros) ;
+			Set<Integer> estrellastmp = new HashSet<>(this.estrellas);
+			numerostmp.removeAll(ob1.getNumeros());
+			resultado =  TOTAL_NUMEROS-numerostmp.size()+TOTAL_ESTRELLAS-estrellastmp.size();	
+		}
 		return resultado;
-		
 	}
 	
 	
@@ -108,8 +115,12 @@ public class Combinacion {
 
 	@Override
 	public String toString() {
+		Integer[] tmp = this.numeros.toArray(new Integer[0]), tmp2 = this.estrellas.toArray(new Integer[0]);
+		//Creo que lo que se hace es iterar por cada una de las cosas del array y meterlo dentro 
+		Arrays.sort(tmp);
+		Arrays.sort(tmp2);
 
-		return this.numeros.toString() + "\n" + this.estrellas.toString();
-	}
+		return String.format("Numeros: %s - Estrellas: %s %n", Arrays.toString(tmp), Arrays.toString(tmp2));
+	} 
 
 }
