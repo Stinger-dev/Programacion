@@ -93,7 +93,7 @@ public class Equipo {
 	}
 	
 	public boolean esExclusivamenteFemenino() {
-		boolean encontrado = this.plantilla.size() <= 0;  //Busco a un masculino  
+		boolean encontrado = this.plantilla.isEmpty();  //Busco a un masculino  
 
 		
 		Iterator<Alumno> it = this.plantilla.iterator();
@@ -139,6 +139,40 @@ public class Equipo {
 			}
 		}
 		return resultado;
+	}
+	
+	public List<String> getNombreChicasOrdenadasAlfabeticamente() {
+		List<String> resultado = new ArrayList<>();
+		for(Alumno alu : this.plantilla) {
+			if(alu.getSexo() == 'M') {
+				resultado.add(alu.getNombre());
+			}
+		}
+		Collections.sort(resultado);
+		return resultado;
+	}
+	
+	
+	public boolean esHayChicaMayorEdad() {
+		boolean encontrado = this.plantilla.isEmpty(); 
+
+		Iterator<Alumno> it = this.plantilla.iterator();
+		
+		while (it.hasNext() && !encontrado) {
+			Alumno aluTmp = it.next();
+			if(aluTmp.getSexo() == 'M' && aluTmp.esMayorDeEdad()) {
+				encontrado = true;
+			}
+		}
+		return !encontrado; 
+	}
+	
+	public int getNumeroCiudadesDistintas() {
+		Set<String> ciudades = new HashSet<>();
+		for(Alumno alu : this.plantilla) {
+			ciudades.add(alu.getCiudad());
+		}
+		return ciudades.size();
 	}
 
 }
