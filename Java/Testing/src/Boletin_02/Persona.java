@@ -1,4 +1,4 @@
-package TEST;
+package Boletin_02;
 
 import java.time.LocalDate;
 
@@ -9,8 +9,8 @@ public class Persona {
 	private int edad;
 	
 
-	public Persona(int edad) {
-		this.edad = edad;
+	public Persona(double nota) {
+		this.nota = nota;
 	}
 	
 	public int getEdad() {

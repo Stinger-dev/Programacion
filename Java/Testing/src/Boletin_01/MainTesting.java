@@ -1,4 +1,4 @@
-package Testing.Boletin01;
+package Boletin_01;
 
 import static org.junit.jupiter.api.Assertions.*;
 

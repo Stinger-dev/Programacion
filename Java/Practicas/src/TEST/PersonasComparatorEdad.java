@@ -2,6 +2,8 @@ package TEST;
 
 import java.util.Comparator;
 
+import TEST.Persona;
+
 public class PersonasComparatorEdad implements Comparator<Persona> {
 
 	@Override

@@ -19,17 +19,15 @@ public class Mapeando {
 	 * @return Mapa con la colección de personas clasificadas por género
 	 */
 	public static Map mapearPersonasPorGenero(Collection<Persona> personas) {
-		HashMap<Genero, Set<Persona>> tmp = new HashMap<>();
+		Map<Genero, Set<Persona>> tmp = new HashMap<>();
 
 		for (Persona persona : personas) {
 			if (!tmp.containsKey(persona.getGenero())) {
 				Set<Persona> tmpSet = new HashSet<>();
 				tmpSet.add(persona);
-				tmp.put(persona.getGenero(), tmpSet);
-			} else {
+			} 
 				tmp.get(persona.getGenero()).add(persona);
 
-			}
 		}
 
 		return tmp;
@@ -44,7 +42,7 @@ public class Mapeando {
 	 * @return Tabla de frecuencias de los números facilitados
 	 */
 	public static Map<Integer, Integer> contarNumeros(Collection<Integer> numeros) {
-		HashMap<Integer, Integer> tmp = new HashMap<>();
+		Map<Integer, Integer> tmp = new HashMap<>();
 
 		for (int numero : numeros) {
 			if (!tmp.containsKey(numero)) {

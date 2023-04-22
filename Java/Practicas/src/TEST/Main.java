@@ -11,7 +11,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		System.out.println(DayOfWeek.FRIDAY.getValue());
+		System.out.println('h' == 'H');
 		
 	}
 
