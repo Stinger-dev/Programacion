@@ -1,18 +1,20 @@
 package TEST;
 
-import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
-
-		System.out.println('h' == 'H');
 		
+		int[] numeros = {1,2,3,4,5};
+		
+		for (int tmp: numeros) {
+		
+		}
+		
+		System.out.println(Arrays.toString(numeros));
 	}
+	
+	
 
 }

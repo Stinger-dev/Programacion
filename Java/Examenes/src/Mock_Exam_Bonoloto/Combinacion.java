@@ -89,8 +89,9 @@ public class Combinacion {
 		if(ob1 != null) {
 			Set<Integer> numerostmp = new HashSet<>(this.numeros) ;
 			Set<Integer> estrellastmp = new HashSet<>(this.estrellas);
-			numerostmp.removeAll(ob1.getNumeros());
-			resultado =  TOTAL_NUMEROS-numerostmp.size()+TOTAL_ESTRELLAS-estrellastmp.size();	
+			numerostmp.retainAll(ob1.getNumeros());
+			estrellastmp.retainAll(ob1.getEstrellas());
+			resultado =  numerostmp.size()+estrellastmp.size();	
 		}
 		return resultado;
 	}
