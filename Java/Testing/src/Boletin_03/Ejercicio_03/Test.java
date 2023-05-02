@@ -2,8 +2,6 @@ package Boletin_03.Ejercicio_03;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-
-
 class Test {
 
 	@org.junit.jupiter.api.Test
@@ -17,12 +15,11 @@ class Test {
 		} catch (ExceptionEquipo e) {
 			fail();
 		}
-		
-		assert(eq1.getAlumnos().equals(eq1.equipoRepetidos(eq2).getAlumnos()));
+
+		assert (eq1.getAlumnos().equals(eq1.equipoRepetidos(eq2).getAlumnos()));
 
 	}
-	
-	
+
 	@org.junit.jupiter.api.Test
 	void testFusionarEquipos() {
 		Equipo<Integer> eq1 = new Equipo<>("erBetisNumeros");
@@ -33,16 +30,15 @@ class Test {
 		try {
 			eq1.addAlumno(num);
 			eq2.addAlumno(num2);
-			
+
 			resultado.addAlumno(num);
 			resultado.addAlumno(num2);
 		} catch (ExceptionEquipo e) {
 			fail();
 		}
-		
-		assert(resultado.getAlumnos().equals(eq1.fusionarEquipo(eq2).getAlumnos()));
+
+		assert (resultado.getAlumnos().equals(eq1.fusionarEquipo(eq2).getAlumnos()));
 
 	}
-
 
 }

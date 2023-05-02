@@ -10,24 +10,15 @@ public class Main {
 		try {
 			ob1 = new Combinacion(2, 12, 17, 28, 4, 6, 10);
 			System.out.println(ob1.toString());
-			
+
 		} catch (CombinacionExeption e) {
 			System.out.println("Algo ha salido mal");
 
 		}
-		System.out.println(histo1.addSorteo(18,04,2023, ob1));
-		
-		
-		System.out.println(histo1.addSorteo(21,04,2023, ob1));
+		System.out.println(histo1.addSorteo(18, 04, 2023, ob1));
+
+		System.out.println(histo1.addSorteo(21, 04, 2023, ob1));
 		System.out.println(histo1.listarSorteosDesdeFecha(LocalDate.now().minusDays(1)));
-
-
-
-
-		
-		
-		
-
 
 	}
 }

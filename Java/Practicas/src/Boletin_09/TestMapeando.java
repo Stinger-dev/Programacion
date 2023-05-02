@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 class TestMapeando {
 
-	private Set<Persona> valores(){
+	private Set<Persona> valores() {
 		Set<Persona> nombre = new HashSet<>();
 		Persona ob1 = new Persona("a", "a", Genero.FEMENINO);
 		nombre.add(ob1);
@@ -27,14 +27,9 @@ class TestMapeando {
 		nombre.add(ob1);
 		return nombre;
 	}
-	
-	@Test
-	void testMapearPersonasPorGenero() {
-		Set<Persona> valores = new HashSet<>(valores());
-		
-
-
-		
-	}
+	/*
+	 * @Test void testMapearPersonasPorGenero() { Set<Persona> valores = new
+	 * HashSet<>(valores()); }
+	 */
 
 }

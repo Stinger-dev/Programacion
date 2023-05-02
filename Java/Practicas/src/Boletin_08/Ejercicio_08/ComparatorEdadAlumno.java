@@ -12,7 +12,7 @@ public class ComparatorEdadAlumno implements Comparator<Alumno> {
 			resultado = ob1.getEdad() - ob2.getEdad();
 		} else if (ob1 == null) {
 			resultado = 1;
-		} else  {
+		} else {
 			resultado = -1;
 		}
 		return resultado;

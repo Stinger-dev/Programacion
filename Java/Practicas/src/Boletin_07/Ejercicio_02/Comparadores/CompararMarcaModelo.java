@@ -15,7 +15,7 @@ public class CompararMarcaModelo implements Comparator<Vehiculo> {
 					: v1.getMarca().compareTo(v2.getMarca());
 		} else if (v1 == null) {
 			resultado = 1;
-		} else if (v2 == null) {
+		} else {
 			resultado = -1;
 		}
 

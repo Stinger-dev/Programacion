@@ -16,7 +16,7 @@ public class CompararTipoyCombustible implements Comparator<Vehiculo> {
 					: v1.getTipoVehiculo().compareTo(v2.getTipoVehiculo());
 		} else if (v1 == null) {
 			resultado = 1;
-		} else if (v2 == null) {
+		} else {
 			resultado = -1;
 		}
 

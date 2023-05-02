@@ -22,7 +22,7 @@ public class Parking {
 	private void resetParking() {
 		for (int i = 0; i < vehiculos.length; i++)
 			try {
-				this.vehiculos[i] = new Vehiculo("Marca", "Modelo", "9999zzzz", Combustibles.electrico,
+				this.vehiculos[i] = new Vehiculo("Marca", "Modelo", "9999zzzz", Combustibles.ELECTRICO,
 						LocalDateTime.of(0, 0, 0, 0, 0), TipoVehiculo.automovil);
 			} catch (Exception e) {
 			}

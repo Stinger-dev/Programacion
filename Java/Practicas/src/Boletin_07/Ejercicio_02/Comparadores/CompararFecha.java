@@ -14,7 +14,7 @@ public class CompararFecha implements Comparator<Vehiculo> {
 			resultado = ob1.getEntrada().compareTo(ob2.getEntrada());
 		} else if (ob1 == null) {
 			resultado = 1;
-		} else if (ob2 == null) {
+		} else {
 			resultado = -1;
 		}
 		return resultado;

@@ -10,39 +10,43 @@ public class Alumno {
 	private int edad;
 	private char sexo;
 	private String ciudad;
-	
-	
 
-	public Alumno(String nombre, String apellido, String dni, int edad, char sexo, String ciudad) throws AlumnoException {
-		if(ciudad != null && !ciudad.trim().isEmpty() && edad>0 && edad < 100 && apellido != null && !apellido.trim().isEmpty() && (sexo == 'H' || sexo == 'M') && dni != null && !dni.trim().isEmpty() && nombre != null && !nombre.trim().isEmpty()) {
+	public Alumno(String nombre, String apellido, String dni, int edad, char sexo, String ciudad)
+			throws AlumnoException {
+		if (ciudad != null && !ciudad.trim().isEmpty() && edad > 0 && edad < 100 && apellido != null
+				&& !apellido.trim().isEmpty() && (sexo == 'H' || sexo == 'M') && dni != null && !dni.trim().isEmpty()
+				&& nombre != null && !nombre.trim().isEmpty()) {
 			this.dni = dni;
 			this.nombre = nombre;
 			this.apellido = apellido;
 			this.sexo = sexo;
 			this.edad = edad;
 			this.ciudad = ciudad;
-		}else {
+		} else {
 			throw new AlumnoException("Error con los datos del alumno");
 		}
 	}
+
 	public String getCiudad() {
 		return ciudad;
 	}
-	
+
 	public int getEdad() {
 		return edad;
 	}
+
 	public boolean esMayorDeEdad() {
 		return this.edad >= 18;
 	}
+
 	public char getSexo() {
 		return sexo;
 	}
-	
+
 	public String getNombre() {
 		return nombre;
 	}
-	
+
 	public String getDni() {
 		return dni;
 	}

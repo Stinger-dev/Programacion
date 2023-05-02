@@ -33,11 +33,11 @@ public class Equipo<T> {
 	public Equipo<T> fusionarEquipo(Equipo<T> e1) {
 		Equipo<T> resultado = new Equipo<>(e1.nombreEquipo + this.nombreEquipo);
 		for (T tmp : e1.plantilla) {
-				resultado.plantilla.add(tmp);
+			resultado.plantilla.add(tmp);
 
 		}
 		for (T tmp : this.plantilla) {
-				resultado.plantilla.add(tmp);
+			resultado.plantilla.add(tmp);
 
 		}
 		return resultado;

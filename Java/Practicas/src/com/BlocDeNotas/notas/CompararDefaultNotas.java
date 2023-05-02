@@ -13,7 +13,7 @@ public class CompararDefaultNotas implements Comparator<Nota> {
 		} else if (ob1 == null) {
 			resultado = 1;
 
-		} else if (ob2 == null) {
+		} else {
 			resultado = -1;
 		}
 		return resultado;

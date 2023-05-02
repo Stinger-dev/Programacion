@@ -17,8 +17,8 @@ public class DiccionarioMapas {
 	public void addPalabra(String palabra, String significado) {
 		if (!this.palabras.containsKey(palabra)) {
 			this.palabras.put(significado, new HashSet<>());
-		} 
-			this.palabras.get(significado).add(significado);
+		}
+		this.palabras.get(significado).add(significado);
 	}
 
 	public String getSignificadosPalabra(String palabra) {

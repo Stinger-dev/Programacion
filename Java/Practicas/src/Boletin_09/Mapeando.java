@@ -25,8 +25,8 @@ public class Mapeando {
 			if (!tmp.containsKey(persona.getGenero())) {
 				Set<Persona> tmpSet = new HashSet<>();
 				tmpSet.add(persona);
-			} 
-				tmp.get(persona.getGenero()).add(persona);
+			}
+			tmp.get(persona.getGenero()).add(persona);
 
 		}
 

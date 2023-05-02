@@ -14,7 +14,7 @@ public class CompararMatricula implements Comparator<Vehiculo> {
 			resultado = ob1.getMatricula().compareTo(ob2.getMatricula());
 		} else if (ob1 == null) {
 			resultado = 1;
-		} else if (ob2 == null) {
+		} else {
 			resultado = -1;
 		}
 		return resultado;

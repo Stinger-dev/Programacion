@@ -9,9 +9,9 @@ class TestGeneral {
 	@Test
 	void testsCaja() {
 		Caja ob1 = new Caja();
-		assert(!ob1.isAbierto());
+		assert (!ob1.isAbierto());
 		ob1.abrirCaja();
-		assert(ob1.isAbierto());
+		assert (ob1.isAbierto());
 		try {
 			ob1.cerrarCaja();
 		} catch (CajaException e) {
@@ -28,24 +28,23 @@ class TestGeneral {
 		assertEquals(0, ob1.getTamagnoCola());
 		assertEquals(null, ob1.getSiguienteCliente());
 	}
-	
-	
+
 	@Test
 	void testsAlmacen() {
-		
+
 		GranAlmacen almacen = new GranAlmacen();
 		try {
 			almacen.atenderCliente(0);
 			fail();
 		} catch (CajaException e) {
-			assert(true);
+			assert (true);
 		}
 		try {
 			almacen.nuevoCliente();
 		} catch (GranAlmacenException e) {
 			fail("no deberia fallar");
 		}
-		
+
 		try {
 			almacen.atenderCliente(0);
 		} catch (CajaException e) {
@@ -55,7 +54,7 @@ class TestGeneral {
 			almacen.atenderCliente(0);
 			fail();
 		} catch (CajaException e) {
-			assert(true);
+			assert (true);
 		}
 		try {
 			almacen.abrirCaja(2);
@@ -67,32 +66,33 @@ class TestGeneral {
 			almacen.abrirCaja(2);
 			fail();
 		} catch (CajaException e) {
-			assert(true);
+			assert (true);
 		}
-		
+
 		try {
-			
+
 			System.out.println(almacen.nuevoCliente().toString());
 		} catch (GranAlmacenException e) {
 			fail("no deberia fallar");
-		}try {
+		}
+		try {
 			almacen.nuevoCliente();
 		} catch (GranAlmacenException e) {
 			fail("no deberia fallar");
-		}try {
+		}
+		try {
 			almacen.nuevoCliente();
 		} catch (GranAlmacenException e) {
 			fail("no deberia fallar");
-		} 
-		
+		}
+
 		try {
 			System.out.println(almacen.atenderCliente(0));
 		} catch (CajaException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
+
 	}
 
 }

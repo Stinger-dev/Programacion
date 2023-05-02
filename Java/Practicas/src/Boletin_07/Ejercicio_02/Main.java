@@ -9,14 +9,14 @@ public class Main {
 	public static void main(String[] args) {
 		Parking ob1 = new Parking();
 		try {
-			Vehiculo ob2 = new Vehiculo("b", "a", "bqqq1111", Combustibles.electrico,
+			Vehiculo ob2 = new Vehiculo("b", "a", "bqqq1111", Combustibles.ELECTRICO,
 					LocalDateTime.of(2010, 10, 10, 8, 50), TipoVehiculo.automovil);
 			ob1.agnadirVehiculo(ob2);
 		} catch (Exception e) {
 			System.out.println("Error al crear el vehiculo, datos no validos");
 		}
 		try {
-			Vehiculo ob2 = new Vehiculo("b", "b", "cqqq1111", Combustibles.hibrido,
+			Vehiculo ob2 = new Vehiculo("b", "b", "cqqq1111", Combustibles.HIBRIDO,
 					LocalDateTime.of(2000, 10, 10, 8, 50), TipoVehiculo.ciclomotor);
 			ob1.agnadirVehiculo(ob2);
 		} catch (Exception e) {
@@ -24,7 +24,7 @@ public class Main {
 		}
 
 		try {
-			Vehiculo ob2 = new Vehiculo("a", "b", "aqqq1111", Combustibles.electrico,
+			Vehiculo ob2 = new Vehiculo("a", "b", "aqqq1111", Combustibles.ELECTRICO,
 					LocalDateTime.of(2001, 10, 10, 8, 50), TipoVehiculo.ciclomotor);
 			ob1.agnadirVehiculo(ob2);
 		} catch (Exception e) {
@@ -32,7 +32,7 @@ public class Main {
 		}
 
 		try {
-			Vehiculo ob2 = new Vehiculo("a", "a", "dqqq1111", Combustibles.electrico,
+			Vehiculo ob2 = new Vehiculo("a", "a", "dqqq1111", Combustibles.ELECTRICO,
 					LocalDateTime.of(2023, 10, 10, 8, 50), TipoVehiculo.ciclomotor);
 			ob1.agnadirVehiculo(ob2);
 		} catch (Exception e) {
@@ -40,7 +40,7 @@ public class Main {
 		}
 
 		try {
-			Vehiculo ob2 = new Vehiculo("z", "b", "fqqq1111", Combustibles.electrico,
+			Vehiculo ob2 = new Vehiculo("z", "b", "fqqq1111", Combustibles.ELECTRICO,
 					LocalDateTime.of(1000, 10, 10, 8, 50), TipoVehiculo.ciclomotor);
 			ob1.agnadirVehiculo(ob2);
 		} catch (Exception e) {
@@ -64,7 +64,7 @@ public class Main {
 		System.out.println("---------------------------------");
 
 		try {
-			Vehiculo ob2 = new Vehiculo("z", "b", "bqqq1111", Combustibles.electrico,
+			Vehiculo ob2 = new Vehiculo("z", "b", "bqqq1111", Combustibles.ELECTRICO,
 					LocalDateTime.of(1000, 10, 10, 8, 50), TipoVehiculo.ciclomotor);
 			ob1.salirCoche(ob2);
 		} catch (Exception e) {

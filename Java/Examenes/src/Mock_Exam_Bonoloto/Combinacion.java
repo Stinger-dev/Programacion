@@ -18,19 +18,17 @@ public class Combinacion {
 		/**
 		 * De n1 a n5 son los numeros y de e1 a e2 son las estrellas
 		 */
-		this(new int[] {n1, n2, n3, n4, n5}, new int[] {e1,e2});
-		
+		this(new int[] { n1, n2, n3, n4, n5 }, new int[] { e1, e2 });
+
 	}
 
 	/*
-	 * Esto no es util pq encontre otra forma de hacerlo, pero es util
-	private static int[] arrayVariable(int ... a) {
-		return a;
-	}
-	*/
+	 * Esto no es util pq encontre otra forma de hacerlo, pero es util private
+	 * static int[] arrayVariable(int ... a) { return a; }
+	 */
 
 	public Combinacion(int[] numeros, int[] estrellas) throws CombinacionExeption {
-		
+
 		this.numeros = new HashSet<>();
 		this.estrellas = new HashSet<>();
 
@@ -47,8 +45,6 @@ public class Combinacion {
 		if (!this.validarEstrellas()) {
 			throw new CombinacionExeption("Valores de estrellas no validos");
 		}
-		
-		
 
 	}
 
@@ -79,25 +75,23 @@ public class Combinacion {
 	public Set<Integer> getNumeros() {
 		return this.numeros;
 	}
-	
+
 	public Set<Integer> getEstrellas() {
 		return this.estrellas;
 	}
-	
+
 	public int comprobarCombinacion(Combinacion ob1) {
 		int resultado = 0;
-		if(ob1 != null) {
-			Set<Integer> numerostmp = new HashSet<>(this.numeros) ;
+		if (ob1 != null) {
+			Set<Integer> numerostmp = new HashSet<>(this.numeros);
 			Set<Integer> estrellastmp = new HashSet<>(this.estrellas);
 			numerostmp.retainAll(ob1.getNumeros());
 			estrellastmp.retainAll(ob1.getEstrellas());
-			resultado =  numerostmp.size()+estrellastmp.size();	
+			resultado = numerostmp.size() + estrellastmp.size();
 		}
 		return resultado;
 	}
-	
-	
-	
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(estrellas, numeros);
@@ -117,11 +111,12 @@ public class Combinacion {
 	@Override
 	public String toString() {
 		Integer[] tmp = this.numeros.toArray(new Integer[0]), tmp2 = this.estrellas.toArray(new Integer[0]);
-		//Creo que lo que se hace es iterar por cada una de las cosas del array y meterlo dentro 
+		// Creo que lo que se hace es iterar por cada una de las cosas del array y
+		// meterlo dentro
 		Arrays.sort(tmp);
 		Arrays.sort(tmp2);
 
 		return String.format("Numeros: %s - Estrellas: %s %n", Arrays.toString(tmp), Arrays.toString(tmp2));
-	} 
+	}
 
 }
