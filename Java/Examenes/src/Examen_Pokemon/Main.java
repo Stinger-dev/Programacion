@@ -1,9 +1,9 @@
-package mundo.pokemon;
+package Examen_Pokemon;
 
-import mundo.pokemon.model.Elemento;
-import mundo.pokemon.model.Entrenador;
-import mundo.pokemon.model.Pokemon;
-import mundo.pokemon.model.PokemonException;
+import Examen_Pokemon.model.Elemento;
+import Examen_Pokemon.model.Entrenador;
+import Examen_Pokemon.model.Pokemon;
+import Examen_Pokemon.model.PokemonException;
 
 public class Main {
 	

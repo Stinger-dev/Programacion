@@ -1,4 +1,4 @@
-package mundo.pokemon.model;
+package Examen_Pokemon.model;
 
 import java.util.Objects;
 import java.util.Random;

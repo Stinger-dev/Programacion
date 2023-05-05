@@ -1,4 +1,4 @@
-package mundo.pokemon.model;
+package Examen_Pokemon.model;
 
 public class PokemonException extends Exception {
 
