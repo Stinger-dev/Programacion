@@ -1,7 +1,9 @@
 package Boletin_10.Ficheros;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.nio.file.Files;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.nio.file.attribute.FileOwnerAttributeView;
@@ -23,7 +25,8 @@ public class Fichero {
 	private File fich;
 
 	public Fichero(String path) throws Exception {
-		// usar files para la fecha y el usuario
+		// usar files para la fecha y el usuario 
+		
 		this.fich = new File(path);
 		if (fich.exists()) {
 			this.permisoLeer = this.fich.canRead();
@@ -41,19 +44,6 @@ public class Fichero {
 		}
 	}
 
-	public String getTexto() {
-		StringBuilder resultado = new StringBuilder();
-		Scanner lector = null;
-		try {
-			lector = new Scanner(fich);
-			while (lector.hasNextLine()) {
-				resultado.append(lector.nextLine()).append(System.lineSeparator());
-			}
-		} catch (FileNotFoundException e) {
-			resultado.append("No se ha podido leer, quiza es una carpeta");
-		}
-		return resultado.toString();
-	}
 
 	private static String generaExtension(String nombreCompleto) {
 		return nombreCompleto.substring(nombreCompleto.lastIndexOf('.'));
@@ -95,6 +85,41 @@ public class Fichero {
 						Fecha Creacion: %s
 					""", this.nombre, this.ruta, this.extension, this.permisoLeer, this.directoriosHijos,
 				this.ficherosHijos, this.tamagno, this.usuario, this.fechaCreacion);
+	}
+	
+	
+	
+	public String getTexto() {
+		StringBuilder resultado = new StringBuilder();
+		Scanner lector = null;
+		try {
+			lector = new Scanner(fich);
+			while (lector.hasNextLine()) {
+				resultado.append(lector.nextLine()).append(System.lineSeparator());
+			}
+			lector.close();
+		} catch (FileNotFoundException e) {
+			resultado.append("No se ha podido leer, quiza es una carpeta");
+		}
+		return resultado.toString();
+	}
+	
+	public String getTexto2() {
+		StringBuilder resultado = new StringBuilder();
+		try {
+			FileReader reader = new FileReader(fich);
+			BufferedReader buffer = new BufferedReader(reader);
+			String linea = buffer.readLine();
+			
+			while(linea != null) {
+				System.out.println(linea);
+				linea = buffer.readLine();
+			}
+			
+		} catch (Exception e) {
+			resultado.append("No se ha podido leer, quiza es una carpeta");
+		}
+		return resultado.toString();
 	}
 
 }

@@ -1,4 +1,4 @@
-package Mock_Exam_Bonoloto;
+package Boletin_10.Euromillones;
 
 public class CombinacionExeption extends Exception {
 

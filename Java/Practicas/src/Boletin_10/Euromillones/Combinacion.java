@@ -1,4 +1,4 @@
-package Mock_Exam_Bonoloto;
+package Boletin_10.Euromillones;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -45,6 +45,8 @@ public class Combinacion {
 		if (!this.validarEstrellas()) {
 			throw new CombinacionExeption("Valores de estrellas no validos");
 		}
+		Integer[] tmp = this.numeros.toArray(new Integer[0]), tmp2 = this.estrellas.toArray(new Integer[0]);
+
 
 	}
 
@@ -117,6 +119,30 @@ public class Combinacion {
 		Arrays.sort(tmp2);
 
 		return String.format("Numeros: %s - Estrellas: %s %n", Arrays.toString(tmp), Arrays.toString(tmp2));
+	}
+	
+	
+	public int getMayorConsecutivo( ) {
+		int resultado = 0;
+		Integer[] tmp = this.numeros.toArray(new Integer[0]);
+		Arrays.sort(tmp);
+		
+		for(int i = 0; i< tmp.length && resultado<tmp.length/2; i++) { 
+	//es un poco mas dificil de entender pero es algo mas rapido pero al aplicarse tantas veces, es rantable, creo UPDATE: el rendimiento que se gana es ridiculamente bajo xdddddd
+	//	for(int i = 0; i< tmp.length; i++) {					
+			boolean consecutivo = true;
+			int candidato = 1;
+			for(int k = i; k< tmp.length-1 && consecutivo; k++) {
+	
+				if(tmp[k+1] == null || tmp[k]+1 != tmp[k+1]) {
+					consecutivo=false;
+				}else {
+					candidato++;
+				}
+			}
+			resultado = (candidato>resultado)? candidato: resultado;
+		}	
+		return resultado;
 	}
 
 }
