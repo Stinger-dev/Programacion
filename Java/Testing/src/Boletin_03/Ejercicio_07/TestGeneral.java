@@ -89,7 +89,6 @@ class TestGeneral {
 		try {
 			System.out.println(almacen.atenderCliente(0));
 		} catch (CajaException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

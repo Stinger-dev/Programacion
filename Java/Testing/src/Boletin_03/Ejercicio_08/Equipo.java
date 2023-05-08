@@ -58,7 +58,7 @@ public class Equipo {
 	@Override
 	public String toString() {
 		StringBuilder resultado = new StringBuilder();
-		this.plantilla.forEach(tmp -> resultado.append(tmp.toString()).append("%n").append("--------").append("%n"));
+		this.plantilla.forEach(tmp -> resultado.append(tmp.toString()).append("\n").append("--------").append("\n"));
 
 		return resultado.toString();
 	}
@@ -76,7 +76,7 @@ public class Equipo {
 	}
 
 	// -----------------------------PARTE NUEVA DEL EJERCICIO
-	// 8-----------------------------
+	// -----------------------------
 	public List<Alumno> getMasculinosMayorEdadOrdenadosEdad() {
 		List<Alumno> tmp = new ArrayList<>();
 
@@ -163,7 +163,7 @@ public class Equipo {
 				encontrado = true;
 			}
 		}
-		return !encontrado;
+		return encontrado;
 	}
 
 	public int getNumeroCiudadesDistintas() {

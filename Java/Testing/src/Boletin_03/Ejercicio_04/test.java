@@ -3,6 +3,8 @@ package Boletin_03.Ejercicio_04;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 class test {
 
@@ -18,9 +20,10 @@ class test {
 		assert (histo.getHistorialCompleto().isBlank());
 	}
 
-	@Test
-	void testBorrarUrl() {
-		int a = 5;
+
+	@ParameterizedTest
+	@ValueSource(ints = {1, 3, 5, 15})
+	void testBorrarUrl(int a) {
 		int b = 3;
 		Historial histo = new Historial("asdj");
 
@@ -34,5 +37,6 @@ class test {
 		histo.rmVisitasUrl("a");
 		assert (histo.getHistorialCompleto().split("->").length - 1 == b);
 	}
+	
 
 }

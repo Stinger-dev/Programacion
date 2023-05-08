@@ -53,7 +53,7 @@ public class Alumno {
 
 	@Override
 	public String toString() {
-		return String.format("%s %s y dni %s", this.nombre, this.apellido, this.dni);
+		return String.format("%s %s y dni %s, edad: %s", this.nombre, this.apellido, this.dni,this.edad);
 	}
 
 	@Override
