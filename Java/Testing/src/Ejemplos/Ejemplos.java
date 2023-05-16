@@ -25,9 +25,8 @@ class Ejemplos {
   
   
 	@ParameterizedTest
-	@CsvSource({"12,13,14,15,16,1,2,5",
-				"40,41,2,3,4,1,3,3",
-				"12,1,19,15,30,7,10,1" // el minimo numero de numeros es 1, es decir, uno mismo
+	@CsvSource({"12,16,1,2,5",
+				"40,4,1,3,3"
 				})
 	void testCalcularMaximoNumerosConsecutivos(int n1, int n2, int n3, int n4, int n5,
 			int e1, int e2, int resultado) {
@@ -53,7 +52,7 @@ class Ejemplos {
 		
 		return salida;
 	}
-
+java e
 	
 	private static Stream<Equipo> streamDeEquiposFemeninos() {
 		return Stream.of(
@@ -72,7 +71,7 @@ class Ejemplos {
 	
 
 	
-		@ParameterizedTest
+	@ParameterizedTest
 	@ValueSource(doubles = { 0, 4.9 })
 	void testNoAprobado(double nota) {
 		Persona ob1 = new Persona(nota);
