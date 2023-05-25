@@ -121,7 +121,6 @@ public class Historial {
 			String [] tmp = lector.nextLine().split(","); 				
 		
 			ob1 = new Combinacion(Integer.valueOf(tmp[1]), Integer.valueOf(tmp[2]), Integer.valueOf(tmp[3]), Integer.valueOf(tmp[4]), Integer.valueOf(tmp[5]), Integer.valueOf(tmp[7]), Integer.valueOf(tmp[8]));
-			//this.addSorteo(null, ob1);
 			
 			this.addSorteo(LocalDate.parse(tmp[0], DateTimeFormatter.ofPattern("d/MM/yyyy")), ob1);
 			}

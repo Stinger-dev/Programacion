@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<oficina>
+    <departamento idDepartamento="SEVDEPT_1">
+        <empleados>
+            <empleado/>
+            <nombreCompleto>Jacinto Jiménez</nombreCompleto>
+            <fechaNacimiento>1971-05-13</fechaNacimiento>
+            <rol>PROGRAMADOR</rol>
+            <codigoEmpleado>SEVEMP_4</codigoEmpleado>
+            <empleado/>
+            <nombreCompleto>Rodrigo Rodríguez</nombreCompleto>
+            <fechaNacimiento>1977-05-13</fechaNacimiento>
+            <rol>ANALISTA</rol>
+            <codigoEmpleado>SEVEMP_2</codigoEmpleado>
+            <empleado/>
+            <nombreCompleto>Ernesto Echevarne</nombreCompleto>
+            <fechaNacimiento>1983-05-13</fechaNacimiento>
+            <rol>JEFE_DEPARTAMENTO</rol>
+            <codigoEmpleado>SEVEMP_1</codigoEmpleado>
+            <empleado/>
+            <nombreCompleto>Melania Maldívar</nombreCompleto>
+            <fechaNacimiento>1973-05-13</fechaNacimiento>
+            <rol>PROGRAMADOR</rol>
+            <codigoEmpleado>SEVEMP_3</codigoEmpleado>
+        </empleados>
+    </departamento>
+    <departamento idDepartamento="SEVDEPT_2">
+        <empleados>
+            <empleado/>
+            <nombreCompleto>Fernanda Fernández</nombreCompleto>
+            <fechaNacimiento>1991-05-13</fechaNacimiento>
+            <rol>PROGRAMADOR</rol>
+            <codigoEmpleado>SEVEMP_8</codigoEmpleado>
+            <empleado/>
+            <nombreCompleto>Carla Costa</nombreCompleto>
+            <fechaNacimiento>1993-05-13</fechaNacimiento>
+            <rol>PROGRAMADOR</rol>
+            <codigoEmpleado>SEVEMP_7</codigoEmpleado>
+            <empleado/>
+            <nombreCompleto>Gabino Gámez</nombreCompleto>
+            <fechaNacimiento>2003-05-13</fechaNacimiento>
+            <rol>JEFE_DEPARTAMENTO</rol>
+            <codigoEmpleado>SEVEMP_5</codigoEmpleado>
+            <empleado/>
+            <nombreCompleto>Lucrecia Lusa</nombreCompleto>
+            <fechaNacimiento>1997-05-13</fechaNacimiento>
+            <rol>ANALISTA</rol>
+            <codigoEmpleado>SEVEMP_6</codigoEmpleado>
+        </empleados>
+    </departamento>
+</oficina>

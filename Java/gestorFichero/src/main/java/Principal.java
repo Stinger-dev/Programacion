@@ -109,7 +109,6 @@ public class Principal {
 			throw new Exception("No existe la caseta");
 		}
 		
-		StringBuilder output = new StringBuilder();	
 		Map<String, List<Caseta>>  ordenarPorCAlle= new HashMap<>();
 		
 		for(Caseta seta : casetas) {

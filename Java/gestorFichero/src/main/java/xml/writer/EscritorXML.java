@@ -83,7 +83,7 @@ public class EscritorXML {
 			optimus.transform(source, result);//Esto es lo que lo crea
 			
 			
-			
+	
 			
 		} catch (ParserConfigurationException | TransformerException | TransformerFactoryConfigurationError e) {
 			e.printStackTrace();
